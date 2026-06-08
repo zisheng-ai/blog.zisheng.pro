@@ -187,3 +187,18 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# hexo-minify
+# Only runs on `hexo generate`. Disable minifyJS in HTML to prevent html-minifier
+# from breaking inline <script> tags that contain template literals with HTML content
+# (e.g. mermaid's openSvgInNewTab function which generates an HTML blob).
+# Standalone .js files are still minified via the js filter.
+minify:
+  html:
+    enable: true
+    options:
+      minifyJS: false
+      minifyCSS: true
+      removeComments: true
+      collapseWhitespace: true
+      removeAttributeQuotes: true
