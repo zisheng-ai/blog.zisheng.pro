@@ -12,7 +12,7 @@ tags:
 cover: https://img.alicdn.com/imgextra/i2/O1CN01cbuFjJ1RXTCX2ovap_!!6000000002121-2-tps-1672-941.png
 ---
 
-最近在整理 AI Agent 方向的知识体系时，我和 GPT 反复聊了几个来回，生成了一张非常系统的 **Agentic Systems Engineer 专家能力架构图**。这张图把从底层工程基础到顶层专家影响力，拆成了七个层次（L1-L7），同时辅以横向的工程素养和业务素养两条维度。
+最近在整理 AI Agent 方向的知识体系时，我和 GPT 反复聊了几个来回，生成了一张非常系统的 **Agentic System Engineer 专家能力架构图**。这张图把从底层工程基础到顶层专家影响力，拆成了七个层次（L1-L7），同时辅以横向的工程素养和业务素养两条维度。
 
 作为全栈开发者，我大部分时间在 JavaScript/TypeScript 和 Node.js 生态里工作，正在往 AI Agent 方向拓展。这张图恰好给了我一个清晰的坐标系——知道自己现在在哪儿，接下来该往哪儿走。这篇文章既是学习笔记，也是一份面向全栈开发者的成长计划。
 
