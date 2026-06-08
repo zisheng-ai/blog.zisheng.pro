@@ -1,6 +1,6 @@
 ---
 title: Typora Mac 版本激活
-description: ''
+description: 记录 Typora Mac 版本的激活方式，通过修改 LicenseIndex chunk 文件中的 hasActivated 判断逻辑，免费解锁 Typora 的全部功能。
 cover: 'https://cdn.jsdelivr.net/gh/youngjuning/images@main/1743757036182.png'
 date: 2025-04-04 16:56:53
 categories:

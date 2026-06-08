@@ -1,7 +1,7 @@
 ---
 title: 在 Mac 上搭建 Java 开发环境
-description: ''
-cover: ''
+description: 介绍如何在 Mac（Apple Silicon）上通过 Homebrew 安装 Zulu JDK 17、配置 Maven 阿里云镜像，快速搭建 Java 开发环境。
+cover: 'https://cdn.jsdelivr.net/gh/youngjuning/images@main/1741301791290.png'
 date: 2025-03-07 07:38:26
 categories:
   - [后端, Java]

@@ -1,15 +1,16 @@
 ---
 title: 字节 agent-tars 技术揭秘（硬啃）
-description: '逐文件去了解 agent-tars 代码，没有顺序，没有思路'
-cover: ''
+description: 深入阅读字节跳动开源的 agent-tars 源码，剖析其基于 Electron 的双进程架构、Aware/Executor/AgentFlow 三层 Agent 循环设计，以及 MCP 工具调用与事件管理机制。
+cover: 'https://cdn.jsdelivr.net/gh/youngjuning/images@main/1743757036182.png'
 date: 2025-04-13 20:14:59
 categories:
-  - [AGI]
+  - AGI
 tags:
-  - agent
-  - tars
-  - bytedance
-  - ReAct
+  - Agent
+  - TARS
+  - 字节跳动
+  - Electron
+  - MCP
 ---
 
 ## 依赖

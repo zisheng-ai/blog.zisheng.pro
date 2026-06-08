@@ -1,6 +1,6 @@
 ---
-title: 在 mac 上安装 v8
-description: 'Installing V8 on a Mac'
+title: 在 Mac 上安装 V8
+description: 介绍如何在 Mac 上从源码编译安装 V8 引擎（d8 shell），并通过 --trace-opt、--prof、--trace-gc 等命令深入了解 V8 的优化、性能分析与垃圾回收机制。
 cover: 'https://cdn.jsdelivr.net/gh/youngjuning/images@main/1741301791290.png'
 date: 2025-03-07 06:54:41
 categories:

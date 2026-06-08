@@ -1,17 +1,20 @@
 ---
-title: QDII 是什么?懒人无脑定投的产品有什么?
-description: ''
-cover: ''
+title: QDII 是什么？懒人无脑定投的产品有哪些？
+description: QDII（合格境内机构投资者）是普通投资者参与美股、港股等境外市场的合规渠道。本文系统介绍 QDII 基金的核心机制，并推荐适合新手的宽基指数、中概股及低波动三类定投组合。
+cover: 'https://cdn.jsdelivr.net/gh/youngjuning/images@main/1743757036182.png'
 date: 2025-03-28 04:39:55
 categories:
-  - [投资理财]
+  - 投资理财
 tags:
-  - [QDII, 理财, 投资, 股票]
+  - QDII
+  - 理财
+  - 定投
+  - 指数基金
 ---
 
 ## QDII 基金是什么？
 
-QDII（Qualified Domestic Institutional Investor，合格境内机构投资者）是中国在资本项目未完全开放的背景下推出的跨境投资机制，允许境内投资者通过持牌机构简接参与境外证券市场（如美股、港股等）。其核心特点包括：
+QDII（Qualified Domestic Institutional Investor，合格境内机构投资者）是中国在资本项目未完全开放的背景下推出的跨境投资机制，允许境内投资者通过持牌机构间接参与境外证券市场（如美股、港股等）。其核心特点包括：
 
 1. **​投资范围广**：可配置股票、债券、大宗商品等全球资产；
 2. **汇率风险**：需人民币兑换外币投资，收益受汇率波动影响；
