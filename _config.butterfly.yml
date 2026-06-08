@@ -5,6 +5,7 @@
 nav:
   logo: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1742301937620.png # image
   display_title: true
+  display_post_title: true # show post title in navbar when scrolling
   fixed: false # fixed navigation bar
 
 menu:
@@ -23,12 +24,17 @@ menu:
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac light #  darker / pale night / light / ocean / mac / mac light / false
-highlight_copy: true # copy button
-highlight_lang: true # show the code language
-highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 400 # unit: px
-code_word_wrap: true
+# Code Blocks Settings (代碼相關)
+# theme: darker / pale night / light / ocean / false
+code_blocks:
+  theme: light
+  macStyle: true
+  height_limit: 400 # unit: px
+  word_wrap: true
+  copy: true
+  language: true
+  shrink: false
+  fullpage: false
 
 # social settings (社交圖標設置)
 # formal:
@@ -219,7 +225,9 @@ footer:
     enable: true
     since: 2020
   custom_text: <a href="/rss2.xml" target="_blank">RSS2</a> | <a href="/privacy/" target="_blank">隐私政策</a> | <a href="/atom.xml" target="_blank">Atom</a>
-  copyright: false # Copyright of theme and framework
+  copyright:
+    enable: false # Copyright of theme and framework
+    version: false
 
 # aside (側邊欄)
 # --------------------------------------
@@ -259,6 +267,7 @@ aside:
     enable: true
     limit: 40 # if set 0 will show all
     color: true
+    custom_colors: # custom colors for specific tags
     orderby: random # Order of tags, random/name/length
     order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
     sort_order: # Don't modify the setting unless you know how it works
@@ -274,10 +283,18 @@ aside:
     post_count: true
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
+    runtime_date: 2020/01/29 00:00:00 # Time diff between publish date and now
+  card_newest_comments:
+    enable: false
+    sort_order: # Don't modify the setting unless you know how it works
+    limit: 6
+    storage: 10 # unit: mins, save data to localStorage
+    avatar: true
   card_post_series:
     enable: true
+    series_title: false # Show the series name as the card title
     orderBy: 'date' # Order by title or date
-    order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending+
+    order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -285,20 +302,6 @@ busuanzi:
   site_uv: true
   site_pv: true
   page_pv: true
-
-# Time difference between publish date and now (網頁運行時間)
-# Formal: Month/Day/Year Time or Year/Month/Day Time
-runtimeshow:
-  enable: true
-  publish_date: 2020/01/29 00:00:00
-
-# Aside widget - Newest Comments
-newest_comments:
-  enable: false
-  sort_order: # Don't modify the setting unless you know how it works
-  limit: 6
-  storage: 10 # unit: mins, save data to localStorage
-  avatar: true
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
@@ -662,6 +665,9 @@ index_top_img_height:
 category_ui: # 留空或 index
 tag_ui: # 留空或 index
 
+# Rounded corners for UI elements (圓角UI)
+rounded_corners_ui: true
+
 # Stretches the lines so that each line has equal width（文字向兩側對齊，對最後一行無效）
 text_align_justify: false
 
@@ -671,7 +677,7 @@ text_align_justify: false
 background:
 
 # Footer Background
-footer_bg: true
+footer_img: true
 
 # Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)
 mask:
@@ -750,28 +756,28 @@ display_mode: light
 beautify:
   enable: true
   field: post # site/post
-  title-prefix-icon: # '\f0c1'
-  title-prefix-icon-color: # '#ee9ca7'
+  title_prefix_icon: '\f0c1'
+  title_prefix_icon_color: '#ee9ca7'
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size:
-  code-font-size:
-  font-family:
-  code-font-family:
+  global_font_size:
+  code_font_size:
+  font_family:
+  code_font_family:
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
   font_link:
-  font-family:
+  font_family:
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
   enable: true
   icon: # the unicode value of Font Awesome icon, such as '\3423'
-  icon-top:
+  icon_top:
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
@@ -813,13 +819,11 @@ wordcount:
 # --------------------------------------
 # You can only choose one, or neither (只能選擇一個 或者 兩個都不選)
 
-# medium-zoom
+# Lightbox (圖片大圖查看模式)
+# choose: fancybox / medium_zoom
+# https://fancyapps.com/fancybox/
 # https://github.com/francoischalifour/medium-zoom
-medium_zoom: false
-
-# fancybox
-# http://fancyapps.com/fancybox/3/
-fancybox: true
+lightbox: fancybox
 
 # Tag Plugins settings (標籤外掛)
 # --------------------------------------
@@ -840,10 +844,16 @@ abcjs:
 # see https://github.com/mermaid-js/mermaid
 mermaid:
   enable: true
+  # Write Mermaid diagrams using code blocks
+  code_write: false
   # built-in themes: default/forest/dark/neutral
   theme:
     light: default
     dark: dark
+  # Enable "Open in New Tab" button
+  open_in_new_tab: true
+  # Enable zoom and pan interactions on diagrams
+  zoom_pan: true
 
 # Note (Bootstrap Callout)
 note:
@@ -889,16 +899,11 @@ snackbar:
 # prefetch (預加載)
 instantpage: false
 
-# https://github.com/vinta/pangu.js
-# Insert a space between Chinese character and English character (中英文之間添加空格)
-pangu:
-  enable: true
-  field: site # site/post
-
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
   enable: true
+  native: false # Use browser's native lazyload
   field: site # site/post
   placeholder:
   blur: true
@@ -954,7 +959,7 @@ CDN:
   third_party_provider: jsdelivr
 
   # Add version number to CDN, true or false
-  version: false
+  version: true
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
