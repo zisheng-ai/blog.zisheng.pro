@@ -370,44 +370,36 @@ katex:
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
 # --------------------------------------
 
-# Algolia search
-algolia_search:
-  enable: false
-  hits:
-    per_page: 6
-
-# Local search
-local_search:
-  enable: true
-  preload: false
-  # Show top n results per article, show all results by setting to -1
-  top_n_per_article: -1
-  # Unescape html strings to the readable one.
-  unescape: true
-  CDN:
-
-# Docsearch
-docsearch:
-  enable: false
-  appId:
-  apiKey:
+search:
+  use: local_search
+  placeholder:
+  algolia_search:
+    hitsPerPage: 6
+  local_search:
+    preload: false
+    top_n_per_article: -1
+    unescape: true
+    pagination:
+      enable: false
+      hitsPerPage: 8
+    CDN:
+  docsearch:
+    appId:
+    apiKey:
+    indexName:
+    option:
   indexName:
   option:
 
 # Share System (分享功能)
 # --------------------------------------
 
-# Share.js
-# https://github.com/overtrue/share.js
-sharejs:
-  enable: true
-  sites: facebook,twitter,wechat,weibo,qq
-
-# AddToAny
-# https://www.addtoany.com/
-addtoany:
-  enable: false
-  item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
+share:
+  use: sharejs
+  sharejs:
+    sites: facebook,twitter,wechat,weibo,qq
+  addtoany:
+    item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
 
 # Comments System
 # --------------------------------------
@@ -509,9 +501,8 @@ giscus:
   repo: youngjuning/blog.zisheng.pro
   repo_id: R_kgDOGFxZtw
   category_id: DIC_kwDOGFxZt84CUMwP
-  theme:
-    light: light
-    dark: dark
+  light_theme: light
+  dark_theme: dark
   option:
     data-mapping: og:title
     data-lang: zh-CN
