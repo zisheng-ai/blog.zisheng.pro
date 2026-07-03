@@ -376,7 +376,7 @@ search:
   algolia_search:
     hitsPerPage: 6
   local_search:
-    preload: false
+    preload: true
     top_n_per_article: -1
     unescape: true
     pagination:
