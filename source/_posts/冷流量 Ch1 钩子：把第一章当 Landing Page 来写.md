@@ -2,6 +2,7 @@
 title: 冷流量 Ch1 钩子：把第一章当 Landing Page 来写
 date: 2026-07-04 10:00:00
 description: 我在做一个 Facebook 投流 + 小说站套利的 AI Agent 系统。这篇讲的是其中一个让我意识到"写作即产品设计"的规范——如何写第一章，让广告带来的冷流量读者在 200 字内决定继续读下去。不谈文学，只谈转化。
+cover: /images/ch1-cold-traffic-hook.webp
 categories:
   - [AI]
 tags:
