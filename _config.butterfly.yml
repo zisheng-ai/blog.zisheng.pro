@@ -498,9 +498,9 @@ twikoo:
 # Giscus
 # https://giscus.app/
 giscus:
-  repo: youngjuning/blog.zisheng.pro
+  repo: zisheng-ai/blog.zisheng.pro
   repo_id: R_kgDOGFxZtw
-  category_id: DIC_kwDOGFxZt84CUMwP
+  category_id: DIC_kwDOGFxZt84CUMwQ
   light_theme: light
   dark_theme: dark
   option:
