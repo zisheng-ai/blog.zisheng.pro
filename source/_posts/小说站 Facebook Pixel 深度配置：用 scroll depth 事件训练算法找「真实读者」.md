@@ -19,7 +19,7 @@ tags:
 
 ## 一句话总结
 
-在章节页实装 scroll depth 事件（ViewContent / ChapterRead50 / ChapterCompleted），让 Facebook 算法学会找「真正读完一章」的人，而不是「会点广告」的人。
+在章节页实装 3 个 Pixel 事件：ViewContent（进入即触发）、ChapterRead50 和 ChapterCompleted（scroll depth 事件），让 Facebook 算法学会找「真正读完一章」的人，而不是「会点广告」的人。
 
 ## 为什么 PageView 是最差的优化信号
 
