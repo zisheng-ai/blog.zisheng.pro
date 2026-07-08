@@ -1,0 +1,15 @@
+{
+  "file": "/Users/zisheng/github/blog.zisheng.pro/source/images/particle-system-confetti-practice.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1672x941",
+  "generation_time_ms": 224966,
+  "generation_time_seconds": 224.97,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 84550,
+  "file_size_kb": 82.6,
+  "postprocess": "direct gpt webp q78",
+  "prompt": "Landscape blog cover illustration for a technical article about particle systems in UI engineering. A dark translucent macOS-style canvas floating over a desktop, filled with bright confetti rectangles, circular chips, diamond glints, soft bloom halos, subtle emitter guides and motion trails represented as abstract physics vectors. Qingshan Lake inspired palette: deep cypress green, lake teal, mist white, subtle dawn gold, plus vivid celebration particles. Clean sophisticated engineering aesthetic, cinematic lighting, high contrast particles, no text, no letters, no watermark, no brand marks, no platform logos.",
+  "created_at": "2026-07-09T00:02:24+0800"
+}
