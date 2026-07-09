@@ -1,0 +1,15 @@
+{
+  "file": "/Users/zisheng/github/blog.zisheng.pro/source/images/owlet-lingdong-family.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1672x941",
+  "generation_time_ms": 58104,
+  "generation_time_seconds": 58.1,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 80258,
+  "file_size_kb": 78.4,
+  "postprocess": "direct webp q72",
+  "prompt": "A wide 16:9 illustration showing four connected UI surfaces of a macOS utility arranged like a family: a menu bar owl icon at top, a notch-shaped floating island panel, a desktop dynamic card widget, and a larger board window with sidebar. Pixel-art owl appears on each surface. Qingshan Lake color palette: misty blue sky, lake cyan, deep cedar green, fog white, touch of morning gold. no text, no letters, no watermark, no brand marks.",
+  "created_at": "2026-07-10T02:57:42+0800"
+}

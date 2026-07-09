@@ -1,0 +1,15 @@
+{
+  "file": "/Users/zisheng/github/blog.zisheng.pro/source/images/owlet-qingshan-lake-palette.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1672x941",
+  "generation_time_ms": 36956,
+  "generation_time_seconds": 36.96,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 48274,
+  "file_size_kb": 47.1,
+  "postprocess": "direct webp q72",
+  "prompt": "A wide 16:9 abstract illustration visualizing a color palette inspired by a misty mountain lake at dawn. Soft gradients of misty blue, lake cyan, deep cedar green, fog white, and a touch of morning gold flow across the frame like water, forest, and sky. Calm, restrained, low-saturation, nature-meets-tech mood. no text, no letters, no watermark, no brand marks.",
+  "created_at": "2026-07-10T02:58:21+0800"
+}

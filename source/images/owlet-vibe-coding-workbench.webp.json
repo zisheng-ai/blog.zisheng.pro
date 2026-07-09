@@ -1,0 +1,15 @@
+{
+  "file": "/Users/zisheng/github/blog.zisheng.pro/source/images/owlet-vibe-coding-workbench.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1672x941",
+  "generation_time_ms": 39731,
+  "generation_time_seconds": 39.73,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 76288,
+  "file_size_kb": 74.5,
+  "postprocess": "direct webp q72",
+  "prompt": "A wide 16:9 illustration of a developer workspace with two AI coding assistants working together. Left side shows a terminal-like panel with code and architecture diagrams; right side shows a faster, more experimental code probe panel. Between them floats a small cute pixel-art owl mascot observing both. Soft cinematic lighting, dark desk, muted blue-green and gold accents, nature-meets-tech mood. no text, no letters, no watermark, no brand marks.",
+  "created_at": "2026-07-10T02:56:41+0800"
+}
