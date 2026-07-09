@@ -1,0 +1,15 @@
+{
+  "file": "/Users/zisheng/Pictures/better-image-gen/owlet-vibe-coding-cover.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "3840x2160",
+  "actual_resolution": "1672x941",
+  "generation_time_ms": 50139,
+  "generation_time_seconds": 50.14,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 79220,
+  "file_size_kb": 77.4,
+  "postprocess": "direct webp q78, copied to blog source/images",
+  "prompt": "A wide 16:9 hero illustration of a desktop computer scene. The top menu bar shows a cute pixel-art owl icon with a gentle wink. The screen notch area expands into a semi-transparent floating island panel with thin glowing lines and small dots representing coding agent session activity. Color palette inspired by a misty mountain lake at dawn: misty blue sky, lake cyan, deep cedar green, fog white, and a touch of soft morning gold. Nature-meets-tech atmosphere, dark gradient background, conceptual visualization, soft cinematic lighting, clean modern interface. no text, no letters, no watermark, no brand marks, no platform logos.",
+  "created_at": "2026-07-10T02:26:20+0800"
+}
