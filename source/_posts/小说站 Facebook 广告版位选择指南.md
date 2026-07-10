@@ -13,7 +13,7 @@ tags:
 cover: /images/fiction-fb-ad-placement.webp
 ---
 
-我在跑几个英语小说站的流量变现（dark romance、paranormal、fantasy 题材，AdX 广告收益模式）。Facebook 广告是主要拉新渠道，目标受众是 25-45 岁英语女性读者。
+我在跑几个英语小说站的流量变现（romance、paranormal、fantasy 题材，AdX 广告收益模式）。Facebook 广告是主要拉新渠道，目标受众是 25-45 岁英语女性读者。
 
 跑了几个月下来，版位选择这件事看似简单，实则有不少坑。记录一下我的判断框架。
 
@@ -89,7 +89,7 @@ Facebook「复制广告组」时会推荐几条建议，值得单独说一下：
 
 **版位能不能开，核心看两件事：**
 
-1. **受众在不在那里** — dark romance 读者的主力阵地是 Instagram 和 Facebook 动态，不是 Marketplace、不是 Messenger
+1. **受众在不在那里** — romance 读者的主力阵地是 Instagram 和 Facebook 动态，不是 Marketplace、不是 Messenger
 2. **素材格式匹不匹配** — 图片素材不要碰竖版视频版位，被系统裁剪后效果等于废
 
 按这两个维度过滤一遍，版位选择基本不会踩坑。
