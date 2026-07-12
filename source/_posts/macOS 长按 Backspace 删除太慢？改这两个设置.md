@@ -1,17 +1,17 @@
 ---
 title: macOS 长按 Backspace 删除太慢？改这两个设置
 date: 2026-07-06 20:00:00
-description: macOS 默认的键盘重复速度对重度键盘用户来说太慢了，长按 Backspace 删文字像在挤牙膏。本文介绍系统设置里的两个滑块怎么拖，以及如何用终端命令突破 GUI 限制，设置完注销一次即可永久生效，适合程序员和写作重度用户。
+description: macOS 默认的键盘重复速度对重度键盘用户来说偏慢，长按 Backspace 删文字像在等动画播完。本文结合系统设置截图，说明键重复速率和重复前延迟怎么调，以及什么时候需要用终端突破 GUI 限制，适合程序员和写作重度用户。
 categories:
   - [效率工具]
 tags:
   - macOS
   - 键盘
   - 效率
-cover: /images/macos-keyboard-repeat-settings.png
+cover: /images/macos-keyboard-repeat-settings.webp
 ---
 
-用 macOS 写代码或者写文章，有个小事经常让我抓狂：长按 Backspace 删内容，前半秒没动静，开始动了又慢得像在爬。系统默认值是为普通用户设计的，程序员完全用不惯。
+用 macOS 写代码或者写文章，有个小事经常让我抓狂：长按 `Backspace` 删内容，前半秒没动静，开始动了又慢得像在爬。这个体感问题不大，但它会在你每天反复删除、修改、回退的时候持续消耗效率。
 
 ## 一句话总结
 
@@ -19,9 +19,9 @@ cover: /images/macos-keyboard-repeat-settings.png
 
 ## 在系统设置里调
 
-打开**系统设置 → 键盘**（直接 Spotlight 搜「键盘」），看到这个界面：
+打开**系统设置 → 键盘**（直接 Spotlight 搜「键盘」），你会看到类似下面这个界面：
 
-![macOS 键盘设置面板](/images/macos-keyboard-repeat-settings.png)
+![macOS 键盘设置面板](/images/macos-keyboard-repeat-settings.webp)
 
 两个关键滑块：
 
