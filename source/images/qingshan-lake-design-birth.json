@@ -1,0 +1,15 @@
+{
+  "file": "/Users/zisheng/github/blog.zisheng.pro/source/images/qingshan-lake-design-birth.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1672x941",
+  "generation_time_ms": 43985,
+  "generation_time_seconds": 43.98,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 82072,
+  "file_size_kb": 80.1,
+  "postprocess": "direct webp q78",
+  "prompt": "Landscape editorial cover illustration for a design-system origin story. A misty Jiangnan lake at dawn transitions naturally into a refined native desktop dashboard made of translucent glass surfaces; blue-mist sky, broad mist-white bands, calm lake teal water, vertical dawn-redwood silhouettes, sparse duckweed green texture, distant gray-blue hills, and one tiny warm dawn-gold edge light. The interface is abstract and believable, compact professional information density, continuous rounded corners, restrained shadows, no nested card clutter. Calm, lucid, low-saturation, premium product design atmosphere, cinematic wide composition, clear depth from nature to digital interface. no text, no letters, no watermark, no brand marks, no platform logos.",
+  "created_at": "2026-07-15T15:56:36+0800"
+}
