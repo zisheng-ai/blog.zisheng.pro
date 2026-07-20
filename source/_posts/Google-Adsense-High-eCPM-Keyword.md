@@ -3,10 +3,10 @@ title: Google Adsense High eCPM
 description: 'Google AdSense Shifts To eCPM Payment Model'
 date: 2024-09-15 10:12:11
 categories:
-  - [Google, Adsense]
+  - [Google, Google AdSense]
   - [站点运营, 广告]
 tags:
-  - google adsense
+  - Google AdSense
   - google adsense eCPM
   - google adsense eCPM 优化
 ---

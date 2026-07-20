@@ -4,12 +4,12 @@ date: 2023-03-19 15:07:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: 包用于组织 Go 源代码，以提高可重用性和可读性。包是位于同一目录中的 Go 源文件的集合。包提供了代码分隔，因此我们可以轻松维护 Go 项目。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言教程
-  - Go 语言教程系列
+  - Go
+  - Go 教程
+  - Go 教程
   - Golang 包
 ---
 

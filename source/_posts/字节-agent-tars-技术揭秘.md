@@ -4,7 +4,7 @@ description: 深入阅读字节跳动开源的 agent-tars 源码，剖析其基�
 cover: 'https://cdn.jsdelivr.net/gh/youngjuning/images@main/1743757036182.png'
 date: 2025-04-13 20:14:59
 categories:
-  - AGI
+  - AI
 tags:
   - Agent
   - TARS

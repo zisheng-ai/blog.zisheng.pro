@@ -4,9 +4,9 @@ date: 2023-03-16 23:15:12
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1678980508682.png
 description: 很多公司的内网 VPN 软件都是需要管理员权限才能安装的，但是有时候我们需要卸载这些软件，但是卸载的时候会报错，不能完成此操作，xxx 已锁定，这个时候我们就需要使用终端来卸载这些软件了。
 categories:
-  - Mac
+  - 工具
 tags:
-  - Mac
+  - macOS
   - VPN
   - 卸载软件
   - 终端

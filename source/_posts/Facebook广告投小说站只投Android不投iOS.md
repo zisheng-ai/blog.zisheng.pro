@@ -5,7 +5,7 @@ description: 在跑小说站 Facebook 广告的过程中，我选择了只投 An
 categories:
   - [AI]
 tags:
-  - Facebook广告
+  - Facebook Ads
   - Android
   - Meta Pixel
   - ATT

@@ -5,7 +5,7 @@ description: 本文介绍了如何通过 Docker 安装配置 Jenkins
 categories:
   - 运维
 tags:
-  - android
+  - Android
   - Jenkins
   - docker
 ---

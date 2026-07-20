@@ -7,7 +7,7 @@ categories:
   - [前端, JavaScript]
 tags:
   - 笔记
-  - javascript
+  - JavaScript
 ---
 
 {% note danger modern %}

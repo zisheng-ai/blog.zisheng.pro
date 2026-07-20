@@ -4,7 +4,7 @@ description: '本文是一篇关于在设备上使用 Node.js 创建简单服务
 date: 2024-09-25 18:27:35
 categories:
   - [紫升翻译计划]
-  - [前端, NodeJs]
+  - [前端, Node.js]
 tags:
   - Node.js
   - 服务器创建

@@ -6,7 +6,7 @@ cover: https://s2.loli.net/2022/04/17/8l1Me5Vf9ZE7Lqh.png
 categories:
   - [前端, JavaScript]
 tags:
-  - JavaScript 隐式类型转换
+  - 隐式类型转换
   - JavaScript 相等操作符
 ---
 

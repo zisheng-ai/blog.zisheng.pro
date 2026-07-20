@@ -1,5 +1,6 @@
 ---
 title: MongoDB 学习笔记
+description: 从安装、systemd 服务管理到常用查询与索引，整理 MongoDB 入门阶段最常用的操作；文中的系统包安装方式适合用于理解，生产部署应以官方当前文档为准。
 date: 2022-04-12 16:55:53
 cover: https://s2.loli.net/2022/04/14/Qu5yAM93EDnImKP.png
 categories:

@@ -5,7 +5,7 @@ date: 2023-07-16 19:06:44
 categories:
   - 站点运营
 tags:
-  - hexo
+  - Hexo
   - vuepress
   - qexo
 ---

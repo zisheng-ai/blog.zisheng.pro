@@ -4,11 +4,11 @@ date: 2023-03-19 15:13:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: map 是 Go 中的一个内置类型，用于存储键值对。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言系列教程
+  - Go
+  - Go 教程
   - 紫升翻译计划
   - Go Map
 ---

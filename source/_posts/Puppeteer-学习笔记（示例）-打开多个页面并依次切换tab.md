@@ -7,7 +7,7 @@ categories:
 tags:
   - Puppeteer
   - 爬虫
-  - Node
+  - Node.js
 ---
 
 在 Puppeteer 中，"tab"通常指的是浏览器窗口中的页面（Page）。如果你想同时打开多个页面（即多个tab），然后依次在它们之间切换，你可以按照以下步骤进行：

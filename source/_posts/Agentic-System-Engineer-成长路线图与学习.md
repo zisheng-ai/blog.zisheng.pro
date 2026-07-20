@@ -3,7 +3,7 @@ title: Agentic System Engineer 成长路线图与学习指南
 description: 从这张能力架构图出发，结合全栈开发背景，规划一条系统化的 Agent 工程师成长路径。
 date: 2026-06-08 22:00:00
 categories:
-  - 人工智能
+  - AI
 tags:
   - Agent
   - 学习路线

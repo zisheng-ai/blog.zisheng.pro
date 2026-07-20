@@ -4,12 +4,12 @@ date: 2023-03-19 15:05:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: Go 中的常量一词用于表示固定值
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言教程
-  - Go 语言教程系列
+  - Go
+  - Go 教程
+  - Go 教程
   - Go 常量
 ---
 

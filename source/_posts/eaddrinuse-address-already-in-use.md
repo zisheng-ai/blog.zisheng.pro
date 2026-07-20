@@ -5,10 +5,10 @@ cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1678415328290.png
 date: 2023-03-10T10:25:43+08:00
 categories:
   - [紫升翻译计划]
-  - [issues]
-  - [前端, NodeJs]
+  - [问题排查]
+  - [前端, Node.js]
 tags:
-  - Node
+  - Node.js
   - EADDRINUSE
   - address already in use
   - 进程

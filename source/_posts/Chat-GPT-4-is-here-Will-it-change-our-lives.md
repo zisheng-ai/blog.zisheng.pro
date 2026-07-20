@@ -3,12 +3,12 @@ title: Chat GPT-4 已经问世——它会改变我们的生活吗？
 description: Chat GPT-4 被誉为改变游戏规则的技术，从许多方面来看它确实是。它在难题标准测试中击败人类，但它和其他 AI 工具将如何影响我们的生活呢？ FOX 5 纽约的 Ashlie Rodriguez 采访了专家，以了解一些情况。
 date: 2023-03-17 14:14:20
 categories:
-  - [人工智能]
+  - [AI]
   - [紫升翻译计划]
 tags:
   - GPT-4
   - ChatGpt
-  - 人工智能
+  - AI
   - AI
 ---
 

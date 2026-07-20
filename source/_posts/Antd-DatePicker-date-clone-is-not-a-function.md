@@ -4,9 +4,9 @@ description: 本文介绍了 Antd <DatePicker /> 组件报 date.clone is not a f
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1683531761607.png
 date: 2023-05-08 15:36:04
 categories:
-  - [issues, antd]
+  - [问题排查, Ant Design]
 tags:
-  - antd
+  - Ant Design
   - datepicker
   - date.clone
 ---

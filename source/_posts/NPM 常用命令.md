@@ -1,5 +1,6 @@
 ---
 title: NPM 常用命令
+description: 汇总 npm 全局包、包所有权、dist-tag、弃用版本与 package.json 字段等日常维护命令，适用于发布和维护 JavaScript 包时快速查阅。
 date: 2022-11-17 12:02:58
 categories:
   - 前端

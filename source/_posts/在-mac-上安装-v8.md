@@ -7,7 +7,7 @@ categories:
   - [浏览器]
 tags:
   - v8
-  - mac
+  - macOS
   - 安装
 ---
 

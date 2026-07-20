@@ -6,7 +6,7 @@ categories:
   - 运维
 tags:
   - GitHub
-  - NPM
+  - npm
   - Probot
   - 机器人
 ---

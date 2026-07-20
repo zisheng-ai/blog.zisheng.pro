@@ -3,7 +3,7 @@ title: macOS 长按 Backspace 删除太慢？改这两个设置
 date: 2026-07-06 20:00:00
 description: macOS 默认的键盘重复速度对重度键盘用户来说偏慢，长按 Backspace 删文字像在等动画播完。本文结合系统设置截图，说明键重复速率和重复前延迟怎么调，以及什么时候需要用终端突破 GUI 限制，适合程序员和写作重度用户。
 categories:
-  - [效率工具]
+  - [工具]
 tags:
   - macOS
   - 键盘

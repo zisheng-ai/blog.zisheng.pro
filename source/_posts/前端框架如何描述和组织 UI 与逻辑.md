@@ -7,7 +7,7 @@ categories:
   - [前端]
   - [笔记]
 tags:
-  - React.js
+  - React
   - Vue.js
   - Angular.js
   - 前端框架

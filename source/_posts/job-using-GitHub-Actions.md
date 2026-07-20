@@ -3,7 +3,7 @@ title: 「已解决」Error "Waiting for a runner to pick up this job" using Git
 description: 当我使用 GitHub Actions 时，有一个漫长的等待，它显示 "Waiting for a runner to pick up this job"，但是这个配置已经成功运行了很多次，我不知道为什么会出现这个问题。
 date: 2023-04-05 23:36:05
 categories:
-  - [issues, GitHub]
+  - [问题排查, GitHub]
 tags:
   - GitHub
   - GitHub Actions

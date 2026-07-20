@@ -7,7 +7,7 @@ categories:
 tags:
   - Facebook Pixel
   - Next.js
-  - AdSense
+  - Google AdSense
   - 广告套利
   - 小说站
   - scroll tracking

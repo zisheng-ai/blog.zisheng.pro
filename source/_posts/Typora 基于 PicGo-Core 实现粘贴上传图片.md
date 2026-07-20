@@ -5,7 +5,7 @@ date: 2020-04-10 17:57:41
 categories:
   - 工具
 tags:
-  - typora
+  - Typora
   - markdown
   - 图床
 ---

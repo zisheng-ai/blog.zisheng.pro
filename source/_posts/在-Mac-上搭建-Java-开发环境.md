@@ -8,7 +8,7 @@ categories:
 tags:
   - Java
   - Maven
-  - Mac
+  - macOS
 ---
 
 ## Java

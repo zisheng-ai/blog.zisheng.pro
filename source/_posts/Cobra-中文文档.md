@@ -3,9 +3,9 @@ title: Cobra 中文文档
 description: Cobra 是 Go 的 CLI 框架。它包含一个用于创建功能强大的现代 CLI 应用程序的库，以及一个用于快速生成基于 Cobra 的应用程序和命令文件的工具。
 date: 2023-03-28 22:18:09
 categories:
-  - Golang
+  - Go
 tags:
-  - Golang
+  - Go
   - Cobra
   - CLI
   - 中文文档

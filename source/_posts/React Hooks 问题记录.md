@@ -6,7 +6,7 @@ cover: https://cdn.jsdelivr.net/gh/youngjuning/images/202112101055275.png
 categories:
   - [前端, React]
 tags:
-  - react
+  - React
   - hooks
   - useEffect
   - useState

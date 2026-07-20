@@ -3,13 +3,13 @@ title: 「已解决」Antd Table columns fixed 不生效
 date: 2023-03-31 11:24:13
 description: 一般 antd Table columns 比较多的时候，我们会使用 fixed 属性来固定列，但是在使用的时候发现，fixed 属性不生效，这是为什么呢？
 categories:
-  - [issues, antd]
+  - [问题排查, Ant Design]
   - [前端, React]
 tags:
-  - antd
+  - Ant Design
   - table
   - fixed
-  - react
+  - React
   - issues
   - columns
 ---

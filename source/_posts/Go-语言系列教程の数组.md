@@ -4,11 +4,11 @@ date: 2023-03-19 15:11:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: 数组是属于同一类型的元素的集合。 例如，整数 5、8、9、79、76 的集合构成一个数组。 Go 中不允许混合不同类型的值，例如同时包含字符串和整数的数组。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言系列教程
+  - Go
+  - Go 教程
   - 紫升翻译计划
   - Go 数组
 ---

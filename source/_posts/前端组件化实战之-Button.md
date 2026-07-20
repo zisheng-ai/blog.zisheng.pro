@@ -1,5 +1,6 @@
 ---
 title: 前端组件化实战之 Button
+description: 以 Button 为例拆解 React Native 组件库的主题、交互与 API 设计，讨论组件开发中如何在设计语义、可复用性和工程约束之间做取舍。
 date: 2023-03-03 10:36:18
 categories:
   - [前端, 组件化]

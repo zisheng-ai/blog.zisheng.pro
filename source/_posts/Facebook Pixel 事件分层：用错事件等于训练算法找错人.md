@@ -10,7 +10,7 @@ tags:
   - 独立站
   - 投流
   - 流量变现
-  - AdSense
+  - Google AdSense
 cover: /images/facebook-pixel-event-layers.webp
 ---
 

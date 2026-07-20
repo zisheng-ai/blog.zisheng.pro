@@ -6,7 +6,7 @@ categories:
   - [前端, JavaScript]
 tags:
   - IIFE
-  - javascript
+  - JavaScript
 ---
 
 在 JavaScript 中，IIFE（Immediately Invoked Function Expression）是一种重要且强大的编程模式。它能够帮助我们创建私有作用域，避免全局命名冲突，并提供了一种模块化的编程方式。本文将深入探讨 IIFE 的概念、用途和最佳实践。

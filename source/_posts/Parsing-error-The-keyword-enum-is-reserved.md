@@ -5,11 +5,11 @@ description: "本文介绍了如何解决 Eslint 警告 Parsing error: The keywo
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1678767745973.png
 categories:
   - [前端, TypeScript]
-  - [前端, EsLint]
+  - [前端, ESLint]
 tags:
   - TypeScript
   - React
-  - Eslint
+  - ESLint
   - airbnb
   - enum
 ---

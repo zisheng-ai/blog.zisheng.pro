@@ -4,12 +4,12 @@ date: 2023-03-19 15:06:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: 函数是执行特定任务的代码块。一个函数接受一个输入，对该输入执行一些计算，然后生成一个输出。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言教程
-  - Go 语言教程系列
+  - Go
+  - Go 教程
+  - Go 教程
   - Golang 函数
 ---
 

@@ -3,7 +3,7 @@ title: let 和 const 的区别
 description: let 与 const 都是只在声明所在的块级作用域内有效。
 date: 2020-02-07 18:49:11
 categories:
-  - [前端,JavaScript]
+  - [前端, JavaScript]
 tags:
   - ES6
   - let

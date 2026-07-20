@@ -6,7 +6,7 @@ cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1680953101680.png
 categories:
   - [紫升翻译计划]
   - [掘金翻译计划]
-  - [前端, NodeJs]
+  - [前端, Node.js]
 tags:
   - Node.js
   - Hapi.js

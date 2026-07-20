@@ -4,7 +4,7 @@ date: 2023-03-30 21:11:30
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1680229234742.png
 description: 本文描述了什么是 CPA 广告计费方式，及其优点和缺点。CPA 广告的高效性在于它更加关注广告销售或申请转化，而且能够量身定制受众，适当地放置相应平台。然而，CPA广告也有投放门槛高、流量难控等问题。
 categories:
-  - [副业, 网赚]
+  - [副业]
 tags:
   - CPA
   - 每次行动成本

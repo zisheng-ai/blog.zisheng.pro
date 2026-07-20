@@ -5,7 +5,7 @@ date: 2020-02-05 14:33:23
 categories:
   - [前端, JavaScript]
 tags:
-  - JavaScript 浅比较
+  - 浅比较
   - JavaScript 深比较
   - JavaScript 基本类型
   - JavaScript 引用类型

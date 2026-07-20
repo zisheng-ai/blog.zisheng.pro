@@ -4,11 +4,11 @@ date: 2023-03-19 15:12:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: 一般来说，函数只接受固定数量的参数。参数可变的函数是一个接受可变参数的函数。如果一个函数定义的最后一个参数前面有省略号 ...，那么该函数可以接受该参数的任何数量的参数。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言系列教程
+  - Go
+  - Go 教程
   - 紫升翻译计划
   - Go 参数可变的函数
 ---

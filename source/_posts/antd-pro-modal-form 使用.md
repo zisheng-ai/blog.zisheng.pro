@@ -2,9 +2,9 @@
 title: Antd Pro ModalFrom 使用记录
 date:  2023-08-04 15:00:00
 categories:
-  - [前端, antd]
+  - [前端, Ant Design]
 tags:
-  - Antd Pro
+  - Ant Design Pro
   - 组件
   - 企业级
   - 中后台

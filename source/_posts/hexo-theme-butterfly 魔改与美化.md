@@ -5,7 +5,7 @@ description: 本文将介绍本站对 hexo-theme-butterfly 进行的一些美化
 categories:
   - 站点运营
 tags:
-  - hexo
+  - Hexo
   - hexo-theme-butterfly
   - 魔改
   - 美化

@@ -3,9 +3,9 @@ title: 从零使用 Go 语言构建 CLI 项目
 description: 项目基于流行的 Go CLI 框架 Cobra 项目开发，基本按预期实现了需求和设计目标，为之后进一步完善开发者生态找到了抓手，为形成开发闭环添加了重要一环（皮一下）。
 date: 2023-04-19 17:46:01
 categories:
-  - Golang
+  - Go
 tags:
-  - Golang
+  - Go
   - CLI
   - Cobra
   - Go

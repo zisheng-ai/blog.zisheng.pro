@@ -3,7 +3,7 @@ title: JavaScript Array 完全指南
 description: ECMAScript 数组的每一项可以保存任何类型的数据；而且大小是可以动态调整的，即可以随着数据的添加自动增长以容纳新增数据。
 date: 2023-03-08 17:17:16
 categories:
-  - [前端,JavaScript]
+  - [前端, JavaScript]
 tags:
   - JavaScript
   - Array

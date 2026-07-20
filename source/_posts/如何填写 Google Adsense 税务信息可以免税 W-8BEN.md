@@ -3,11 +3,11 @@ title: 如何填写 Google Adsense 税务信息可以免税 | W-8BEN
 description: 本文讲解了如何填写 Google Adsense 税务信息可以免税，以及如何填写 W-8 BEN 表格。
 date: 2023-05-06 19:47:53
 categories:
-  - [Google, Adsense]
+  - [Google, Google AdSense]
   - [站点运营, 广告]
 tags:
   - Google
-  - Adsense
+  - Google AdSense
   - W-8BEN
 ---
 

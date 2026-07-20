@@ -6,8 +6,8 @@ date: 2020-02-13 20:33:46
 categories:
   - [前端, JavaScript]
 tags:
-  - JavaScript 函数防抖
-  - JavaScript 函数节流
+  - 防抖
+  - 节流
   - JavaScript throttle
   - JavaScript debounce
 ---

@@ -1,5 +1,6 @@
 ---
 title: Nest.js 快速上手
+description: 从 Nest CLI 创建项目开始，梳理 Nest.js 的模块、控制器和应用启动结构，帮助熟悉 TypeScript 后端框架的基础组织方式。
 date: 2020-03-02 04:05:36
 cover: https://i.loli.net/2020/03/02/GwX6NzRqa85bLhT.png
 categories:

@@ -5,7 +5,7 @@ description: 本文介绍了 2023 年大陆人如何成功创建一个新的 Goo
 categories:
   - Google
 tags:
-  - Google Account
+  - Google 账号
   - 科学上网
   - 谷歌账号
   - 大陆

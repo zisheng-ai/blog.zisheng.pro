@@ -4,12 +4,12 @@ date: 2023-03-19 15:08:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: if 是一个具有布尔条件的语句，如果该条件的值为 true，它将执行一个代码块。如果判定条件为 false，它将执行 else 代码块。在本教程中，我们将研究 if 语句的各种语法和使用方法。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言教程
-  - Go 语言教程系列
+  - Go
+  - Go 教程
+  - Go 教程
   - Golang if else
 ---
 

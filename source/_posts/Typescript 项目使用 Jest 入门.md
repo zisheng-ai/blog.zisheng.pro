@@ -4,8 +4,8 @@ date: 2023-07-28 20:00:00
 categories:
   - [前端, 单元测试]
 tags:
-  - typescript
-  - nodejs
+  - TypeScript
+  - Node.js
   - jest
 description: ' 本文介绍了如何在 Typescript 项目中初始化 Jest 并正确配置'
 cover: https://s2.loli.net/2023/07/28/yn6xFzcPVOZjIDh.png

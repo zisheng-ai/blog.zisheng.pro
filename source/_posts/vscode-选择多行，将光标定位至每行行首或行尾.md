@@ -5,7 +5,7 @@ date: 2023-05-10 11:06:14
 categories:
   - [前端, VS Code]
 tags:
-  - vscode
+  - VS Code
   - 光标
 ---
 

@@ -3,7 +3,7 @@ title: TypeScript+Jest+Coverage+Eslint+Prettier 项目初始化
 description: '从零到一初始化一个 TypeScript 项目，使用最新的技术'
 date: 2025-02-24 21:45:40
 categories:
-  - [前端, 工程化]
+  - [前端, 前端工程化]
 tags:
   - TypeScript
   - Jest

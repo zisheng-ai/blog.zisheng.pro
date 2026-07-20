@@ -6,7 +6,7 @@ date: 2020-03-04 04:17:10
 categories:
   - [前端, React]
 tags:
-  - antd
+  - Ant Design
   - UI 框架
   - Ant Design
   - babel-plugin-import

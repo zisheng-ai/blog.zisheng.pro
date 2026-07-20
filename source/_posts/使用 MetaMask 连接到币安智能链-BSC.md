@@ -4,7 +4,7 @@ date: 2021-12-30 10:36:17
 description: 币安智能链是目前世界上最大的以太坊交易所，MetaMask 则是专注服务于以太坊的钱包应用。
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images/202112301455053.png
 categories:
-  - [加密货币,区块链]
+  - [加密货币, 区块链]
 tags:
   - MetaMask
   - BSC

@@ -4,12 +4,12 @@ date: 2023-03-19 15:02:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: 学习编程语言没有比让自己满手沾满代码的血🩸更有效的方法了。让我们一起开始第一个 Go 程序吧。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言教程
-  - Go 语言教程系列
+  - Go
+  - Go 教程
+  - Go 教程
 ---
 
 这是《Golang 教程系列》的第二篇。如果还没有，你可能需要先看一下我们的上一篇教程 [Golang 介绍和环境安装](https://juejin.cn/post/6942492190291525662) 以了解一下 Golang 是什么以及如何下载 Golang。

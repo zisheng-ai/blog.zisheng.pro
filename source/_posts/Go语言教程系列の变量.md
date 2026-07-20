@@ -4,12 +4,12 @@ date: 2023-03-19 15:03:00
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: 这是我们 Golang 教程系列中的第三篇教程，它涉及 Golang 中的变量。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言教程
-  - Go 语言教程系列
+  - Go
+  - Go 教程
+  - Go 教程
   - Golang 变量
 ---
 

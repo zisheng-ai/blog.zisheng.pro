@@ -7,7 +7,7 @@ categories:
   - [前端, React Native]
   - [编程]
 tags:
-  - React Native 动画
+  - React Native
   - React Native 组件库
   - React Native Animation Libraries
 ---

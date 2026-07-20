@@ -4,11 +4,11 @@ date: 2023-03-19 15:11:30
 cover: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1679280067130.png
 description: 切片是数组上面的一个方便、灵活和强大的包装器。切片并不拥有自己的任何数据。它们只是对现有数组的引用。
 categories:
-  - [Golang, Go 语言系列教程]
+  - [Go]
   - [紫升翻译计划]
 tags:
-  - Golang
-  - Go 语言系列教程
+  - Go
+  - Go 教程
   - 紫升翻译计划
   - Go 切片
 ---

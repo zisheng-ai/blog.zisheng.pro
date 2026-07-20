@@ -4,8 +4,8 @@ description: 'Puppeteer 是一个 Node 库，它提供了一个高级 API 来通
 date: 2024-03-07 10:19:57
 categories: 全栈开发
 tags:
-  - puppeteer
-  - nodejs
+  - Puppeteer
+  - Node.js
   - 前端
 ---
 

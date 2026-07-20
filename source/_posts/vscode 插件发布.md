@@ -6,7 +6,7 @@ description: VsCode 插件开发的最后一步也是最繁琐的就是插件发
 categories:
   - [前端, VS Code]
 tags:
-  - vscode 插件
+  - VS Code
   - vscode 插件开发
   - vscode 插件发布
   - vscode 发布插件
