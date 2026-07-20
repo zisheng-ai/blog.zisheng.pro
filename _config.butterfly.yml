@@ -59,7 +59,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://cdn.jsdelivr.net/gh/youngjuning/images@main/1680450445599.png
+index_img: /images/home-hero.webp
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: https://s2.loli.net/2023/07/17/leDBhzw8xEnOmS6.png
