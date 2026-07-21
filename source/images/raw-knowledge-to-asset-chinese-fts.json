@@ -1,0 +1,15 @@
+{
+  "file": "/Users/zisheng/github/blog.zisheng.pro/source/images/raw-knowledge-to-asset-chinese-fts.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1280x720",
+  "generation_time_ms": 53506,
+  "generation_time_seconds": 53.51,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 68796,
+  "file_size_kb": 67.2,
+  "postprocess": "GPT image edit removed generated labels; center-cropped to 16:9; lossy WebP q78",
+  "prompt": "Faithfully edit this exact same landscape technology illustration. Preserve the identical left-to-right composition, dark navy palette, cyan and amber highlights, transparent layered knowledge refinery, raw documents on the left, structured cards and agent terminals on the right. The single allowed change is to remove every piece of readable or pseudo-readable text, every letter, word, number, label and code character from the entire image. Replace all labels and code lines with clean abstract luminous bars, dots, geometric blocks and non-linguistic interface marks. Do not add any new objects, logos, watermarks, symbols that resemble writing, or brand marks. The result must contain absolutely no text or letters while retaining the same premium AI infrastructure editorial visual.",
+  "created_at": "2026-07-22T06:00:27+0800"
+}
