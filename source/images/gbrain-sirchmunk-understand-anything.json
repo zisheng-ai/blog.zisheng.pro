@@ -1,0 +1,15 @@
+{
+  "file": "/Users/zisheng/github/blog.zisheng.pro/source/images/gbrain-sirchmunk-understand-anything.webp",
+  "model": "gemini-3.1-flash-image-4k",
+  "requested_size": "1280x720",
+  "actual_resolution": "3200x1800",
+  "generation_time_ms": 61981,
+  "generation_time_seconds": 61.98,
+  "response_format": "api",
+  "output_format": "webp",
+  "file_size_bytes": 211112,
+  "file_size_kb": 206.2,
+  "postprocess": "Gemini atmospheric backdrop, accurate HTML/CSS Chinese cover layer, Chrome 2x screenshot, WebP q90",
+  "prompt": "Dark AI infrastructure editorial background showing an abstract knowledge core, real-time retrieval stream and code graph, with clean negative space and no generated text or logos.",
+  "created_at": "2026-07-22T01:43:00+0800"
+}
