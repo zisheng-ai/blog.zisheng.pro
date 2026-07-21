@@ -41,49 +41,49 @@ git config --global pager.branch false
 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时。我们使用 `n` 模块来维护 Node 的版本：
 
 ```sh
-$ brew install n
+brew install n
 ```
 
 ### 安装指定版本
 
 ```sh
 # 安装最新的稳定版
-$ sudo n lts
+sudo n lts
 # 安装最新版
-$ sudo n latest
+sudo n latest
 # 安装指定版本
-$ sudo n 10.16.0
+sudo n 10.16.0
 ```
 
 ### 删除命令
 
 ```sh
 # 删除指定版本
-$ n rm 12.10.0
+n rm 12.10.0
 # 除去当前版本以外的所有缓存版本
-$ n prune
+n prune
 ```
 
 ### 安装 yarn 和 pnpm
 
 ```sh
-$ brew install yarn pnpm -g
+brew install yarn pnpm -g
 ```
 
 ### 更新 npm
 
 ```shell
-$ sudo npm install -g npm
+sudo npm install -g npm
 ```
 
 ### nrm 管理 registry
 
 ```shell
-$ sudo npm install -g nrm
+sudo npm install -g nrm
 # 列出可用的代理
-$ nrm ls
+nrm ls
 # 添加私有代理
-$ nrm add <name> <url> [home]
+nrm add <name> <url> [home]
 ```
 
 ### 安装 npkill
@@ -91,9 +91,9 @@ $ nrm add <name> <url> [home]
 轻松查找并删除旧的和沉重的 `node_modules` 文件夹
 
 ```sh
-$ npm install -g npkill
+npm install -g npkill
 # 在要搜索的根目录执行，比如 cd Desktop
-$ npkill
+npkill
 ```
 
 ### 清理所有 node 进程
@@ -108,9 +108,9 @@ $ pkill esbuild
 ### 权限不足
 
 ```sh
-$ sudo chmod -R 777 /usr/local/lib/node_modules
-$ sudo chmod -R 777 /usr/local/bin/
-$ sudo chmod -R 777 ~/.npm
+sudo chmod -R 777 /usr/local/lib/node_modules
+sudo chmod -R 777 /usr/local/bin/
+sudo chmod -R 777 ~/.npm
 ```
 
 ## VS Code
@@ -126,9 +126,9 @@ $ sudo chmod -R 777 ~/.npm
 
 ```sh
 # 切换 shell 为 zsh
-$ chsh -s /bin/zsh
+chsh -s /bin/zsh
 # 通过 curl 安装 ohmyzsh
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### 插件
@@ -197,13 +197,13 @@ I'd also recommend adding these to your `.zshrc`:
 ## MySql
 
 ```shell
-$ brew install mysql
+brew install mysql
 ```
 
 ### 修改配置文件
 
 ```shell
-$ code /usr/local/etc/my.cnf
+code /usr/local/etc/my.cnf
 ```
 
 ### 启动服务
@@ -221,7 +221,7 @@ brew services stop mysql
 ### 安全设置
 
 ```shell
-$ mysql_secure_installation
+mysql_secure_installation
 ```
 
 1. 建立密码验证插件
