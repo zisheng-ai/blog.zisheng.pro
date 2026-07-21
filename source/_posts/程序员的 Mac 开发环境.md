@@ -28,16 +28,11 @@ $ xcode-select --install
 ## Git
 
 ```bash
-# 1、初始化设置
 git config --global user.name '紫升'
 git config --global user.email 'luozhu2021@gmail.com'
-# 2、将 `color.ui` 设置为 `auto` 可以让命令的输出拥有更高的可读性。
 git config --global color.ui auto
-# 3、忽略大小写
 git config --global core.ignorecase false
-# 4、core.autocrlf
 git config --global core.autocrlf input
-# 5、输出到terminal而不是vim
 git config --global pager.branch false
 ```
 
