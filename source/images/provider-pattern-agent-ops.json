@@ -1,0 +1,14 @@
+{
+  "file": "/private/tmp/provider-pattern-agent-ops.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1672x941",
+  "generation_time_ms": 10000,
+  "generation_time_seconds": 10.0,
+  "response_format": "api-response",
+  "output_format": "webp",
+  "file_size_bytes": 80586,
+  "file_size_kb": 78.7,
+  "postprocess": "direct webp q78",
+  "prompt": "Landscape editorial technology illustration for an architecture engineering blog cover. A dark-green Agent Operations command center uses three modular translation bridges to normalize signals from three abstract execution engines into one unified stream. No text, no letters, no watermark, no brand marks."
+}
