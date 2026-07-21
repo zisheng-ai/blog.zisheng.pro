@@ -1,0 +1,15 @@
+{
+  "file": "source/images/home-hero-4k.webp",
+  "model": "gemini-3.1-flash-image-4k",
+  "requested_size": "3840x2160",
+  "actual_resolution": "3840x2160",
+  "generation_time_ms": 28607,
+  "generation_time_seconds": 28.61,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 905324,
+  "file_size_kb": 884.1,
+  "postprocess": "center crop from Gemini 4096x4096 source to 3840x2160, WebP q90, no downscale",
+  "prompt": "Ultra-high-resolution 4K cinematic hero banner for a Chinese personal technology blog about frontend engineering and AI infrastructure. An abstract developer workbench at night: crisp luminous modular grid, subtle code-like geometric patterns, a small warm desk lamp, floating translucent network paths and intelligent-agent nodes, deep indigo and teal palette with restrained emerald accents. Premium editorial digital illustration, sharply rendered fine details across the full image, clean central upper area with low-detail negative space for a white website title overlay, visual focus along lower edges, no people, no recognizable logos. Wide 16:9 landscape composition. no text, no letters, no watermark, no brand marks, no platform logos.",
+  "created_at": "2026-07-22T07:20:56+0800"
+}
