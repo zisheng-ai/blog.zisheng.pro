@@ -1,7 +1,7 @@
 ---
 title: Sidecar 边车模式：给本地 Agent 划出一间受控执行舱
 date: 2026-07-18 18:30:00
-description: Sidecar 不只是 Kubernetes 里的辅助容器，也适合解决桌面 Agent 的多运行时、权限和故障隔离问题。本文从 Tauri、Rust Core 与 Node Agent Host 的真实架构取舍出发，解释边车模式是什么、什么时候值得用、IPC 和权限边界怎样设计，以及它为什么不等于安全沙箱。
+description: Sidecar 不只是 Kubernetes 里的辅助容器，也适合解决桌面 Agent 的多运行时、权限和故障隔离问题。本文从 Tauri、原生 Core 与 Node Agent Host 的真实架构取舍出发，解释边车模式是什么、什么时候值得用、IPC 和权限边界怎样设计，以及它为什么不等于安全沙箱。
 categories:
   - [AI]
 tags:
@@ -9,13 +9,13 @@ tags:
   - Agent
   - AI Infra
   - Tauri
-  - Rust
+  - 原生运行时
   - Node.js
   - Architecture
 cover: /images/sidecar-pattern-overview.webp
 ---
 
-最近在设计一个本地 Agent Host 时，我遇到了一个很典型的架构冲突：桌面应用希望用 Tauri + Rust 建立稳定的本地可信边界，但 Codex、Qoder、MCP 等 Agent 能力又高度依赖 Node.js 与 TypeScript 生态。
+最近在设计一个本地 Agent Host 时，我遇到了一个很典型的架构冲突：桌面应用希望用 Tauri 的原生层建立稳定的本地可信边界，但 Codex、Qoder、MCP 等 Agent 能力又高度依赖 Node.js 与 TypeScript 生态。
 
 把所有能力塞进一个进程当然最快，但代价也很直接：UI、数据库、凭据、文件系统和 Agent Runtime 混成一团，一个 Provider SDK 崩溃或越权，就可能拖垮整个应用。
 
@@ -46,15 +46,15 @@ cover: /images/sidecar-pattern-overview.webp
 
 本地 Agent 天然跨越多个技术栈：桌面壳需要窗口、更新、Keychain 和系统权限；Agent Runtime 需要 Provider SDK、MCP、工具调用和流式事件；数据层又需要 SQLite、索引与事务一致性。
 
-如果全部交给 Node 主进程，接入生态很舒服，但 Node 同时成了窗口、数据库、凭据和执行权限的可信根。反过来，如果全部重写成 Rust，首版成本高，Provider SDK 更新也要长期追赶。
+如果全部交给 Node 主进程，接入生态很舒服，但 Node 同时成了窗口、数据库、凭据和执行权限的可信根。反过来，如果全部重写为原生实现，首版成本高，Provider SDK 更新也要长期追赶。
 
-边车提供了第三条路：Rust Core 保留控制权，Node Agent Host 只承载 Node 生态中不可替代的部分。
+边车提供了第三条路：原生 Core 保留控制权，Node Agent Host 只承载 Node 生态中不可替代的部分。
 
 | 组件 | 主要职责 | 不应该拥有的能力 |
 |---|---|---|
 | React Webview | UI、交互、无特权状态 | 原始 Secret、任意 Shell、数据库连接 |
-| Rust Core | 权限、生命周期、更新、审计、IPC 校验 | Provider 业务实现细节 |
-| Rust Data Service | SQLite、同步、索引、事务 | UI 和 Provider Token |
+| 原生 Core | 权限、生命周期、更新、审计、IPC 校验 | Provider 业务实现细节 |
+| 原生数据服务 | SQLite、同步、索引、事务 | UI 和 Provider Token |
 | Node Sidecar | Codex/Qoder SDK、ACP、MCP Adapter | 最终授权决策、主数据库所有权 |
 
 ## 一次 Agent 请求怎样穿过边界
@@ -66,7 +66,7 @@ Sidecar 设计真正难的不是“把 Node 启起来”，而是定义每一步
 典型链路是：
 
 1. Webview 提交声明式任务，例如“在当前 workspace 分析这组文件”。
-2. Rust Core 校验调用来源、workspace scope、参数长度、组织策略和用户审批。
+2. 原生 Core 校验调用来源、workspace scope、参数长度、组织策略和用户审批。
 3. Core 给任务生成受限 capability profile，再通过版本化 IPC 发给 Sidecar。
 4. Sidecar 调用 Provider SDK，并把 token、tool call、progress 和 error 作为有序事件流返回。
 5. Core 对事件做审计和脱敏，再通过 Tauri Channel 推给 UI。
@@ -79,11 +79,11 @@ Sidecar 设计真正难的不是“把 Node 启起来”，而是定义每一步
 
 这是 Sidecar 最容易被误解的地方。
 
-把 Node 放进独立进程，只解决了部分故障隔离：Sidecar 崩溃后可以单独拉起，内存泄漏不会直接污染 Rust Core。但如果它继承了完整环境变量、用户目录和网络权限，它仍然能够读取不该读取的文件，或者绕过审批直接访问外部服务。
+把 Node 放进独立进程，只解决了部分故障隔离：Sidecar 崩溃后可以单独拉起，内存泄漏不会直接污染原生 Core。但如果它继承了完整环境变量、用户目录和网络权限，它仍然能够读取不该读取的文件，或者绕过审批直接访问外部服务。
 
 ![Sidecar 的可信边界与防线](/images/sidecar-trust-boundary.svg)
 
-因此我会把 Rust Core 设计为 Permission Broker：
+因此我会把原生 Core 设计为 Permission Broker：
 
 - Frontend 不能直接启动 Sidecar，只能提交声明式 Intent。
 - Sidecar 只接收完成当前任务所需的最小输入，不接收完整配置和全部 Secret。
@@ -91,7 +91,7 @@ Sidecar 设计真正难的不是“把 Node 启起来”，而是定义每一步
 - 启动时校验 binary hash、签名、协议版本和 capability profile。
 - 所有高风险工具调用经过 Core 审批与审计，Sidecar 不能自己给自己授权。
 
-Tauri capability 主要约束 `Webview → Rust Core`，不会自动沙箱已经启动的 Rust Plugin 或 Node Sidecar。把平台 ACL 当成完整安全方案，是一个危险的边界误判。
+Tauri capability 主要约束 `Webview → 原生 Core`，不会自动沙箱已经启动的原生插件或 Node Sidecar。把平台 ACL 当成完整安全方案，是一个危险的边界误判。
 
 ## 生命周期治理比启动命令重要
 

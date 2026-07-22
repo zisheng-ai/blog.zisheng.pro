@@ -170,7 +170,7 @@ type ProviderId = 'codex' | 'qoder';
 Codex 有 Thread ID，Qoder 有 Session ID，Hermes 未来也会有自己的会话标识。但这些 ID 都不能直接成为 Agent Ops 的业务主键。
 
 ```text
-Autoship Session ID
+本地 Agent 平台 Session ID
     ├── providerId: qoder
     ├── providerVersion: 1.0.47
     ├── adapterVersion: 0.1.0
@@ -293,7 +293,7 @@ Provider Adapter 解决的是兼容性，不自动解决安全问题。
 
 我当前采用的 MVP 边界是：
 
-1. Rust Core 验证 Workspace Grant。
+1. 原生 Core 验证 Workspace Grant。
 2. Core 生成有界的只读 Workspace Context。
 3. Adapter 禁用 Provider 原生文件、Shell、网络和 MCP 副作用工具。
 4. Provider 只负责推理与流式输出。

@@ -13,7 +13,7 @@ tags:
 cover: /images/ime-composition-enter-submit.webp
 ---
 
-最近在做 Autoship 的 Agentic Chat 时，我遇到一个看似很小、实际会直接破坏输入体验的问题：使用中文输入法输入英文片段，候选框还开着，此时按 Enter 本来只是确认候选词，Composer 却把这次 Enter 当成了“发送消息”。
+最近在做 本地 Agent 平台 的 Agentic Chat 时，我遇到一个看似很小、实际会直接破坏输入体验的问题：使用中文输入法输入英文片段，候选框还开着，此时按 Enter 本来只是确认候选词，Composer 却把这次 Enter 当成了“发送消息”。
 
 这个 Bug 特别容易被纯英文开发环境漏掉。按钮点击正常，英文键盘正常，甚至多数浏览器里只判断 `isComposing` 也能正常；但到了 macOS 输入法和 WebKit 的真实事件时序，消息仍然会提前发出去。
 
@@ -35,7 +35,7 @@ compositionupdate × N
 compositionend
 ```
 
-在这个阶段，输入框中看起来已经出现了 `autos`，但它可能仍处于输入法的组合态。用户按 Enter 的意图是从候选列表中选择 `autoship`，不是把整条聊天消息发给 Agent。
+在这个阶段，输入框中看起来已经出现了 `autos`，但它可能仍处于输入法的组合态。用户按 Enter 的意图是从候选列表中选择 `local-agent`，不是把整条聊天消息发给 Agent。
 
 浏览器通过 `KeyboardEvent.isComposing` 暴露当前按键是否发生在 composition session 内。MDN 对它的定义很直接：在 `compositionstart` 之后、`compositionend` 之前触发的键盘事件，该值应为 `true`。
 
@@ -179,7 +179,7 @@ export function ChatComposer() {
 
 ## 在 assistant-ui 里应该在哪里拦截
 
-Autoship 使用 assistant-ui 的 `ComposerPrimitive.Input`。这类 headless primitive 通常已经包含基础的 `isComposing` 判断，但宿主应用仍可能需要为特定桌面 WebView、输入法和系统版本补充 guard。
+本地 Agent 平台 使用 assistant-ui 的 `ComposerPrimitive.Input`。这类 headless primitive 通常已经包含基础的 `isComposing` 判断，但宿主应用仍可能需要为特定桌面 WebView、输入法和系统版本补充 guard。
 
 关键是把处理放在 Composer 输入边界，而不是 `sendMessage()` 里事后猜测：
 
