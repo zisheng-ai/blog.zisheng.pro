@@ -17,13 +17,13 @@ cover: /images/ai-native-knowledge-base.webp
 
 最近几天，我围绕一个本地 Agent 平台连续讨论和验证了 FTS、BM25、Vector Search、RAG、GraphRAG、LLM Wiki、代码结构分析、Query Rewrite 与 Evidence。名词越查越多，最后暴露出的缺口却很具体：缺的并非更大的 Vector Database，而是一套能让 Agent 稳定取用知识、同时让人审查依据的基础设施。
 
-这也是我从前端转向 Agent / AI Infra 后越来越强烈的感受。过去做知识库，默认用户会打开目录、搜索标题、阅读页面；现在 Agent 不会沿着侧边栏一页页翻文档，它需要一个带 Scope、版本、权限、证据和失败语义的接口。如果还用“把文档塞进向量库”理解这件事，Demo 很快，系统却很难进入真实执行链路。
+从前端转向 Agent / AI Infra 后，我发现知识库的默认用户变了。人会打开目录、搜索标题、阅读页面；Agent 不会沿着侧边栏一页页翻文档，它需要一个带 Scope、版本、权限、证据和失败语义的接口。只做“把文档塞进向量库”，Demo 很快，系统却很难进入真实执行链路。
 
 ## 一句话总结
 
 如果系统只是让 AI 搜文档、回答问题，叫 **AI 知识库** 足够准确；如果知识的生产、索引、检索、引用、版本、权限和反馈闭环都围绕 Agent 的运行方式设计，才应该叫 **AI Native 知识库**。
 
-它既不是单纯给人看的，也不是只给 Agent 看的：
+这套系统同时服务人和 Agent，只是职责不同：
 
 ```text
 人维护事实源
@@ -34,8 +34,6 @@ Agent 返回带 Evidence / Citation 的回答或行动依据
     ↓
 人和系统共同验证、纠错、发布新版本
 ```
-
-我更愿意用一句话概括：
 
 > 给人维护，给 Agent 调用，给双方追溯。
 
@@ -62,13 +60,13 @@ Agent 返回带 Evidence / Citation 的回答或行动依据
 
 ## 知识库究竟是给人看的，还是给 Agent 看的
 
-这件事包含三层契约。
+我把职责拆成三层。
 
 ### 第一层：事实源给人维护
 
 Spec、ADR、Repository、数据库记录、产品规则和正式流程，首先要能被 Owner 阅读、评审和修改。Markdown、Git、文档平台和业务系统依然重要，因为人需要理解完整上下文，也需要承担发布责任。
 
-这一层解决：
+人需要在这一层回答五个问题：
 
 - 谁写的；
 - 谁批准的；
@@ -102,13 +100,13 @@ Agent 不需要每次读取整本 Wiki。它需要结构化、可过滤、可预
 }
 ```
 
-这份结果应该适合放进 Context Window，也应该适合被程序检查。Agent 关心的是：哪些片段与当前任务相关、是否有权限、是否属于当前版本、证据能否支撑下一步行动。
+这份结果要控制 Context Window 预算，也要允许程序检查。Agent 关心的是：哪些片段与当前任务相关、是否有权限、是否属于当前版本、证据能否支撑下一步行动。
 
 ### 第三层：Evidence 给双方验证
 
 Evidence 是这两层之间的桥。对 Agent，它是生成回答和执行计划的 Grounding；对人，它是回到原始事实、判断答案是否可信的入口。
 
-因此，真正成熟的界面不只展示一段自然语言答案，还应允许查看：
+界面不能只展示一段自然语言答案，还应允许查看：
 
 - 引用了哪些片段；
 - 每个片段来自哪个 Source；
@@ -153,7 +151,7 @@ Query → Retrieve Top K → 拼进 Prompt → LLM Generate
 
 ### 2023–2024：Production RAG
 
-RAG 从 Demo 进入生产后，大家很快发现“选一个 Embedding Model + Vector Database”远远不够。成熟链路开始加入：
+RAG 从 Demo 进入生产后，“选一个 Embedding Model + Vector Database”很快暴露出边界。生产链路开始加入：
 
 - Keyword + Vector 的 Hybrid Search；
 - RRF 或其他 Fusion；
@@ -165,7 +163,7 @@ RAG 从 Demo 进入生产后，大家很快发现“选一个 Embedding Model + 
 
 [Elastic 的官方文档](https://www.elastic.co/docs/solutions/search/hybrid-search)直接把 Hybrid Search 定义为全文检索与 Vector Search 的组合，并推荐用 RRF 合并排名。[Anthropic 的 Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval)则把文档级上下文补回每个 Chunk，再同时建立 Contextual Embedding 和 Contextual BM25，并叠加 Rerank。
 
-这阶段最重要的变化是：RAG 不再是一条 Prompt 技巧，而是一套 Search / Data / Eval 工程。
+到这一步，RAG 已经从 Prompt 技巧扩展成 Search / Data / Eval 工程。
 
 ### 2024–：GraphRAG 处理关系和全局问题
 
@@ -176,7 +174,7 @@ GraphRAG 显式抽取 Entity、Relationship、Claim 和 Community，让检索能
 
 [Microsoft GraphRAG](https://microsoft.github.io/graphrag/)同时保留 Basic Search、Local Search、Global Search 和 DRIFT Search。Local Search 会把图中的实体关系与原始文本片段组合，Global Search 则基于 Community Report 做全局汇总。这本身就说明 GraphRAG 不是 RAG 的替代品，而是增加了适合关系型问题的索引与 Query Mode。
 
-它的代价同样明确：实体和关系抽取需要额外模型调用，图谱可能有噪声，增量更新、冲突和版本治理也更复杂。Microsoft 的官方入门文档直接提醒 GraphRAG 索引会消耗大量 LLM 资源。没有真实的关系查询，就不该为了架构图好看而上 GraphRAG。
+实体和关系抽取需要额外模型调用，图谱可能有噪声，增量更新、冲突和版本治理也更复杂。Microsoft 的官方入门文档直接提醒 GraphRAG 索引会消耗大量 LLM 资源。没有真实的关系查询，就不该为了架构图好看而上 GraphRAG。
 
 ### 2025–2026：Agentic Retrieval
 
@@ -200,7 +198,7 @@ Rerank + Evidence Merge
 
 [Azure AI Search 的 Agentic Retrieval](https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview)已经把这个过程产品化：根据 Query 和 Conversation History 生成聚焦的 Subquery，并行执行 Keyword、Vector 或 Hybrid Search，经过 Semantic Rerank 后保留引用与执行日志。
 
-这不是说每次检索都要让 LLM 自由规划。简单查询直接走低成本路径更稳；只有多意图、多来源、需要多跳证据的问题，才值得进入 Agentic Retrieval。
+简单查询直接走低成本路径更稳。多意图、多来源或需要多跳证据时，再让 LLM 参与检索规划。
 
 ## 这些技术之间到底是什么关系
 
@@ -250,7 +248,7 @@ Index 应该是可重建的 Projection，不应该成为第二事实源。Embedd
 
 ### 3. Chunk 不是按固定字数切完就结束
 
-好的 Chunk 需要保留标题层级、表格语义、代码符号、列表边界和来源位置。不同内容应该用不同策略：
+Chunk 至少要保留标题层级、表格语义、代码符号、列表边界和来源位置。不同内容应该用不同策略：
 
 | 内容 | 优先切法 |
 | --- | --- |
@@ -303,7 +301,7 @@ Vector Candidates ──┘
 
 先查改写结果，零命中再回退原始 Query。这样行为可解释、可测试，也能快速验证问题到底在分词、Query 还是内容本身。
 
-当复杂 Query 占比上升，再增加 Multi-query、Subquery Planning 和 Source Routing。Agentic 不是默认开关，而是按任务复杂度升级的执行策略。
+当复杂 Query 占比上升，再增加 Multi-query、Subquery Planning 和 Source Routing。只有任务复杂度值得支付规划成本时，才进入 Agentic Retrieval。
 
 ### 7. Rerank 之前先保证 Candidate Recall
 
@@ -358,7 +356,7 @@ source_uri + source_version + location + content_hash
 | P50 / P95 Latency | 检索给 Agent Turn 增加多少延迟 |
 | Cost per Retrieval | Rewrite、Embedding、Rerank 与 Planner 的成本 |
 
-例如，我会先用确定性 Query Rewrite；只有中文评测出现 `Recall@5 < 85%` 或 `Zero-hit Rate > 5%`，才把 Multilingual Embedding + Hybrid Search 提到下一阶段。这里的阈值是项目阶段门槛，不是行业统一标准。
+我的当前门槛是：先用确定性 Query Rewrite；中文评测出现 `Recall@5 < 85%` 或 `Zero-hit Rate > 5%` 时，再把 Multilingual Embedding + Hybrid Search 提到下一阶段。这两个数字服务于当前项目，不是行业标准。
 
 ## 每个技术如何决策
 
@@ -374,7 +372,7 @@ source_uri + source_version + location + content_hash
 | Code Graph | 跨文件 Symbol、调用关系、模块依赖 | 只是找文本或当前未保存文件 | 语言解析器与增量更新 |
 | Agentic Retrieval | 多意图、多源、多跳、需要迭代检索 | 单一事实查询、高 QPS 低延迟路径 | Planner 成本、不可预测性与 Trace 复杂度 |
 
-一个非常实用的判断顺序是：
+我用下面这个顺序做技术决策：
 
 ```text
 问题能否靠精确词回答？
@@ -392,7 +390,7 @@ source_uri + source_version + location + content_hash
 
 ## 这些技术应该如何搭配
 
-我推荐把系统拆成一个事实面、多个检索投影和一个统一 Knowledge Gateway。
+落地时，我把系统拆成一个事实面、多个检索投影和一个统一 Knowledge Gateway。
 
 ```text
 ┌──────────────────── Human-owned Sources ────────────────────┐
@@ -422,7 +420,7 @@ source_uri + source_version + location + content_hash
                        Eval & Feedback
 ```
 
-统一 Gateway 很重要。不要把 BM25、Vector Database、Graph Engine 和本地搜索全部直接暴露给每个 Agent Provider，否则权限、版本、Citation 和审计会散落在不同 Adapter 里。
+BM25、Vector Database、Graph Engine 和本地搜索都收口到 Gateway；如果直接暴露给每个 Agent Provider，权限、版本、Citation 和审计会散落在不同 Adapter 里。
 
 Provider 应该看到一个稳定的领域接口，例如：
 
@@ -455,7 +453,7 @@ Markdown / Repository
 → Agent
 ```
 
-优点是本地、便宜、可解释。内容不多时，不要先搭分布式 Vector Database。
+这套组合完全在本地运行，依赖少，检索行为也容易解释。内容不多时，不要先搭分布式 Vector Database。
 
 ### 组合 B：团队知识库
 
@@ -468,7 +466,7 @@ Git / 文档平台 / 业务系统
 → Chat / Agent 共用
 ```
 
-这是我认为当前最通用的 Production RAG 基线。先把 Hybrid、治理和 Eval 做稳，再讨论图谱。
+对多数团队，这已经是一条够用的 Production RAG 基线。先把 Hybrid、治理和 Eval 做稳，再讨论图谱。
 
 ### 组合 C：Agent 平台
 
@@ -485,7 +483,7 @@ Git / 文档平台 / 业务系统
       Agent Action + Knowledge Trace + Eval
 ```
 
-这四类知识不应该互相替代：
+四类信息的时效和结构不同：
 
 - 共享知识回答“团队已经确认了什么”；
 - Raw File Search 回答“当前磁盘上刚刚发生了什么”；
@@ -504,7 +502,7 @@ Git / 文档平台 / 业务系统
 
 先打通 Source、Chunk、FTS/BM25、Citation 和 `no_evidence`。对中文和领域词加入确定性 Query Rewrite。
 
-交付标准不是“能回答”，而是：
+我把这一阶段的验收写成五条：
 
 - 正确 Source 能进入 Top K；
 - Citation 能回到原文；
@@ -575,11 +573,9 @@ Agentic Retrieval 增加了自主性，也放大了跨项目污染、越权和 P
 - `no_evidence` 是正常结果，不是系统故障；
 - Agent 的每个关键行动都要能回到 Knowledge Trace。
 
-最后回到文章开头的问题：知识库是给人看的，还是给 Agent 看的？
+我的责任划分已经很明确：**人负责事实源，Agent 使用检索接口，Knowledge Gateway 管住 Scope、Revision 和 Permission。** Agent 给出答案或准备执行动作时，再把 Evidence、Citation 和 Trace 交回给人。
 
-如果只选一个，我会说**事实源首先给人负责**。因为知识的权威性、冲突和发布责任不能交给索引或模型。但这套系统的检索接口、上下文格式和运行时治理，应该优先为 Agent 设计。Agent 用完之后，再把 Evidence、Citation 和 Trace 交还给人。
-
-这才是我认可的 AI Native：不是页面上多了一个 Chat Box，而是知识真正进入 Agent 的感知、决策和行动链路，同时没有丢掉人的控制权。
+是否 AI Native，可以用一次错误行动来检验：系统能不能沿着 Trace 找到它用了哪条 Evidence、哪个版本、哪个检索分支，并据此修正 Source 或索引。只能看到一段回答、查不到依据的产品，即使加了 Chat Box，也仍然只是文档问答。
 
 ## 参考资料
 
