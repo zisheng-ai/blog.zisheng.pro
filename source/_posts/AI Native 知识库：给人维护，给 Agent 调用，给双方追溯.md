@@ -15,6 +15,10 @@ tags:
 cover: /images/ai-native-knowledge-base.webp
 ---
 
+![AI Native 知识库参考架构：给人维护、给 Agent 调用、给双方追溯](/images/ai-native-knowledge-base-architecture.webp)
+
+*AI Native 知识库参考架构：Source of Truth 与 Index 分离，Knowledge Gateway 统一处理 Query Rewrite、Scope、Permission、Context Budget、Evidence 与 Trace。*
+
 最近几天，我围绕一个 Agent 应用连续讨论和验证了 FTS、BM25、Vector Search、RAG、GraphRAG、LLM Wiki、代码结构分析、Query Rewrite 与 Evidence。名词越查越多，最后暴露出的缺口却很具体：缺的并非更大的 Vector Database，而是一套能让 Agent 稳定取用知识、同时让人审查依据的基础设施。
 
 从前端转向 Agent / AI Infra 后，我发现知识库的默认用户变了。人会打开目录、搜索标题、阅读页面；Agent 不会沿着侧边栏一页页翻文档，它需要一个带 Scope、版本、权限、证据和失败语义的接口。只做“把文档塞进向量库”，Demo 很快，系统却很难进入真实执行链路。
