@@ -15,7 +15,7 @@ tags:
 cover: /images/gbrain-sirchmunk-understand-anything.webp
 ---
 
-最近在设计一个本地 Agent Host 的知识架构时，我连续遇到了三个名字：GBrain、Sirchmunk 和 Understand Anything。
+最近在设计一个 Agent Host 的知识架构时，我连续遇到了三个名字：GBrain、Sirchmunk 和 Understand Anything。
 
 它们都宣称能让 Agent 更懂知识、更懂文件或更懂代码，功能列表里也都有 Search、Knowledge、Graph、MCP。第一眼很容易把它们排成一条升级路线：普通 RAG 不够，就上 Graph；Graph 还不够，就做 LLM Wiki；最后找一个“大而全”的项目把其他方案全部替代。
 
@@ -191,7 +191,7 @@ Cloud Knowledge
   → Atomic Activate Revision
 ```
 
-这样才能做到离线、回滚和可复现。如果本地 Agent 每次都读云端的“最新知识”，同一个长 Session 前后可能得到不同结论，审计和复现都会失去基础。
+这样才能做到离线、回滚和可复现。如果 Agent 每次都读云端的“最新知识”，同一个长 Session 前后可能得到不同结论，审计和复现都会失去基础。
 
 ## Execution Evidence 不等于 Wiki Citation
 
@@ -238,7 +238,7 @@ Review + Citation
 
 | 阶段 | 目标 |
 |---|---|
-| Phase 1 | GBrain Local 跑通团队 Knowledge 到本地 Agent 的查询闭环 |
+| Phase 1 | GBrain Local 跑通团队 Knowledge 到 Agent 的查询闭环 |
 | Phase 2 | 增加 GBrain Cloud、Knowledge Draft、Review 和版本发布 |
 | Phase 3 | Raw Files 实时检索成为瓶颈时接 Sirchmunk |
 | Phase 4 | 调用链、依赖和 Diff Impact 成为瓶颈时接 Understand Anything |
