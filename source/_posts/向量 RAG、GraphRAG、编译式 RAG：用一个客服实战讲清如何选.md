@@ -47,6 +47,105 @@ Raw Sources
 
 三条路线共享 Scope、Revision、Permission、Citation 和 Trace。不要让 Agent 直接面对三个互不兼容的知识后端。
 
+## 读实战前，先认清这些专业术语
+
+RAG 相关术语容易混在一起，是因为它们来自不同层：有些描述数据，有些描述检索算法，有些描述知识结构，还有一些负责权限和证据治理。先把它们放回一条完整链路：
+
+```text
+Raw Source
+  → Parse / Chunk
+  → Index
+  → Query
+  → Retrieve / Rank
+  → Evidence Context
+  → LLM Generate 或 Agent Action
+```
+
+这条链路里，Source 是事实，Index 是为了查询而生成的派生数据，Evidence 是本次回答实际采用的依据。三者不能混为一层。
+
+### RAG、Context 与 Agent
+
+| 术语 | 通俗解释 | 在客服实战中的位置 |
+| --- | --- | --- |
+| RAG | Retrieval-Augmented Generation，先检索外部资料，再让 LLM 基于资料生成答案 | 回答退款政策前，先取回有效政策片段 |
+| Retrieval | 根据 Query 从外部知识中找候选内容 | 找到退款时效、订单状态和活动例外 |
+| Generation | LLM 根据问题与 Evidence 组织自然语言答案 | 把政策改写成客服能直接使用的回复 |
+| Context Window | 模型单次推理能接收的 Token 范围 | 决定一次能放入多少问题、对话和证据 |
+| Context Budget | 系统主动分配给证据的上下文额度 | 在有限 Token 中优先放最关键的政策和例外 |
+| LLM | Large Language Model，负责理解与生成，不自动等于事实源 | 解释证据、生成回复，但不能凭空创造政策 |
+| Agent | 能调用 Tool、读取结果并继续决策的 LLM 运行循环 | 查询知识后，再读取订单状态或创建升级建议 |
+| Copilot | 嵌在现有工作台中辅助人的 Agent 形态 | 在当前工单里推荐字段、证据和下一步动作 |
+| Tool | Agent 可调用的受控接口 | 只读查询订单状态，或在审批后执行某项业务动作 |
+
+RAG 只规定“检索后再生成”这条工作流，并没有规定一定使用向量数据库。BM25、Vector Search、Graph Search，甚至直接读取编译好的 Wiki，都可以成为 Retrieval 的实现。
+
+### 从文档到索引
+
+| 术语 | 通俗解释 | 容易踩的坑 |
+| --- | --- | --- |
+| Raw Source | 未被检索系统改写的原始事实源 | 把自动摘要当成原始政策，导致错误无法追溯 |
+| Parse | 从 Markdown、PDF、HTML、表格等格式中提取正文与结构 | 表格行列、标题层级和脚注在解析时丢失 |
+| Chunk | 为检索切出的内容单元，不一定等于固定字数 | 切得太小会失去条件，太大会混入无关内容 |
+| Metadata | 附在内容上的结构化信息，如类型、时间、权限和版本 | 只算相似度，不过滤过期或无权限政策 |
+| Index | 为搜索构建的派生结构，如倒排索引、向量索引或图索引 | 把 Index 当事实源；正确做法是允许删除后重建 |
+| Ingestion | 从 Source 到 Parse、Chunk、Metadata 和 Index 的整条构建流水线 | 只做首次导入，没有增量更新和失败重试 |
+
+以退款政策为例，一个 Chunk 不应只剩“预计 1–3 个工作日到账”。它还要带上“原路退款”“演示会员等级”“支付渠道结果为准”等条件，并保留 Source Version。否则检索命中了数字，回答仍可能是错的。
+
+### 检索与排序
+
+| 术语 | 通俗解释 | 它擅长什么 |
+| --- | --- | --- |
+| Query | 用户问题或系统改写后的搜索表达式 | 表达这次到底要找什么 |
+| Query Rewrite | 把口语问题改写成更适合搜索的一组表达式 | 补充别名、标准术语或拆出多个子问题 |
+| Keyword Search | 按出现的词查找内容 | 状态码、产品编码、政策名称等精确词 |
+| BM25 | 根据词频、词的稀有程度和文档长度计算关键词相关性 | 把包含关键术语的文档排到前面 |
+| Embedding | 把文字映射成一组浮点数，用距离近似语义相似度 | 连接“退款多久到”和“退款到账时效”等不同说法 |
+| Vector Search | 比较 Query Vector 与文档 Vector，找语义接近的内容 | 自然语言问法、同义表达和模糊描述 |
+| Vector Database | 存储向量并执行近邻搜索的数据库或索引能力 | 解决向量的存取与查询，不负责答案正确性 |
+| Metadata Filter | 在召回前后按租户、时间、权限、版本等条件过滤 | 阻止测试规则、旧政策或越权内容进入上下文 |
+| Hybrid Search | 同时使用 Keyword / BM25 与 Vector Search | 兼顾精确术语和自然语言语义 |
+| Rank Fusion | 把多个检索器的排名合并成一个候选列表 | 合并 BM25 与 Vector 的结果，而不是简单拼接 |
+| Reranker | 用更精细的模型对少量候选重新判断相关性 | 把“语义相近”进一步收窄为“能回答当前问题” |
+| Top K | 最终保留排名最靠前的 K 条结果 | 控制 Recall、噪声和 Context Budget 的平衡 |
+
+Embedding 不会“理解并保存答案”。它只提供一种相似度信号。Reranker 也不能找回第一轮完全没召回的资料。因此检索评测要分开看 Recall 和排序质量。
+
+### 图、编译与知识表示
+
+| 术语 | 通俗解释 | 在本文中的例子 |
+| --- | --- | --- |
+| Entity / Node | 可以独立识别的业务对象 | 订单、会员、权益券、政策 |
+| Relationship / Edge | 两个 Entity 之间有类型和方向的关系 | 订单使用权益券、权益券受活动政策约束 |
+| Knowledge Graph | 由 Entity、Relationship 及其属性组成的知识网络 | 表达订单、商品、会员、权益与政策的连接 |
+| Multi-hop | 为回答问题连续经过多条关系 | 取消订单 → 活动权益券 → 活动政策 → 退回条件 |
+| GraphRAG | 用图结构定位关系，再结合原文 Evidence 生成答案 | 解释某类权益为什么没有随订单取消而退回 |
+| Community | 图中连接紧密的一组实体 | 围绕退款、支付或会员权益形成的对象集合 |
+| Community Report | 对某个 Community 预先生成的主题摘要 | 用于回答“这批客服资料有哪些主要问题” |
+| Knowledge Compilation | 在构建阶段把 Raw Sources 整理成稳定的知识产物 | 把多份政策编成可审阅的支付异常处理 Procedure |
+| Intermediate Representation | Source 与最终消费之间的中间表示，简称 IR | Topic Page、Entity Page、Procedure、Conflict Page |
+| Build Artifact | 一次编译输出的、可版本化和可重建的产物 | Wiki、Knowledge Pack、索引和 Citation Map |
+| LLM Wiki | 由 LLM 增量维护、相互链接的结构化 Wiki | 让重复查询优先复用已有页面，再回原文核验 |
+
+GraphRAG 和编译式 RAG 都会在 Query 发生前做更多加工。区别是 GraphRAG 主要预构建关系，编译式 RAG 还会预先合并事实、流程、冲突和解释结构。
+
+### Evidence、Citation 与治理
+
+| 术语 | 通俗解释 | 为什么需要它 |
+| --- | --- | --- |
+| Evidence | 本次回答实际使用、能够支撑某个 Claim 的内容 | 判断答案是不是基于资料，而不是模型猜测 |
+| Claim | 回答里可以被验证真假的具体陈述 | “退款预计 1–3 个工作日到账”就是一个 Claim |
+| Citation | 从 Claim / Evidence 回到 Source 的可定位引用 | 让客服和审核人检查原文、章节与版本 |
+| Grounding | 回答中的 Claim 是否被给定 Evidence 支撑 | 区分“答得像真的”和“确实有依据” |
+| Scope | 一次查询被允许使用的业务、租户或知识范围 | 防止不同业务空间的规则互相污染 |
+| Revision | 本次查询固定使用的知识版本 | 避免新旧政策混在同一个答案里 |
+| Permission | 当前主体是否有权读取或执行 | 有权看通用政策，不代表有权看真实订单 |
+| Approval | 高风险动作执行前的明确批准 | 退款、补偿和改订单不能由知识命中自动触发 |
+| Trace | 记录 Query、路由、候选、Evidence 和最终输出的链路 | 出错后能定位是召回、排序、编译还是生成问题 |
+| Knowledge Gateway | 统一接收知识查询并治理多个后端的入口 | 屏蔽 Hybrid、Graph 和 Compiled Wiki 的接口差异 |
+
+Evidence 不等于“搜索结果”，Citation 也不只是文章末尾列几个链接。理想状态是回答中的关键 Claim 能逐条对应具体 Evidence，Evidence 再指向带 Revision 的 Source Span。
+
 ## 先把“编译式 RAG”这个词说准确
 
 Vector RAG 和 GraphRAG 已经有相对明确的工程含义，“编译式 RAG”却还不是一个边界稳定的标准术语。不同人可能用它指：
@@ -133,7 +232,7 @@ Document
   → Vector Index
 ```
 
-生产环境我不会只留向量通道。错误码、服务名、版本号和配置项更适合 BM25，因此实际链路会是：
+生产环境我不会只留向量通道。订单状态码、产品编码、政策编号和标准术语更适合 BM25，因此实际链路会是：
 
 ```text
 Query
