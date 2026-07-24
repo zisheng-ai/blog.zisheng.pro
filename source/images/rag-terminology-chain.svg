@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">RAG 全链路术语地图</title><desc id="desc">从原始资料、索引、查询、证据到回答或动作，展示 RAG 术语所在的不同层次。</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070b15"/><stop offset="1" stop-color="#111629"/></linearGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8799c7" stroke-opacity=".06"/></pattern><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#7787a8"/></marker></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="80" y="86" fill="#f7f9ff" font-size="48" font-weight="800">先把术语放回一条 RAG 链路</text><text x="80" y="132" fill="#9aa8c5" font-size="22">Source 是事实，Index 是派生结构，Evidence 是本次回答真正采用的依据</text>
+    <g font-size="19" font-weight="700" text-anchor="middle">
+      <rect x="70" y="230" width="230" height="120" rx="22" fill="#142238" stroke="#41c8f0"/><text x="185" y="282" fill="#61dcff">RAW SOURCE</text><text x="185" y="318" fill="#d8eff7" font-weight="500">政策 · FAQ · 已审核案例</text>
+      <rect x="370" y="230" width="250" height="120" rx="22" fill="#142238" stroke="#41c8f0"/><text x="495" y="282" fill="#61dcff">PARSE / CHUNK</text><text x="495" y="318" fill="#d8eff7" font-weight="500">正文 · 结构 · Metadata</text>
+      <rect x="690" y="230" width="250" height="120" rx="22" fill="#1a1732" stroke="#a875ec"/><text x="815" y="282" fill="#d195ff">INDEX</text><text x="815" y="318" fill="#eee5f7" font-weight="500">BM25 · Vector · Graph</text>
+      <rect x="1010" y="230" width="230" height="120" rx="22" fill="#24190f" stroke="#efa45f"/><text x="1125" y="282" fill="#ffc27e">RETRIEVE</text><text x="1125" y="318" fill="#f7e6d6" font-weight="500">Filter · Fusion · Rerank</text>
+      <rect x="1310" y="230" width="220" height="120" rx="22" fill="#17251f" stroke="#61d59c"/><text x="1420" y="282" fill="#7ae8b3">EVIDENCE</text><text x="1420" y="318" fill="#dff8eb" font-size="17" font-weight="500">Claim · Citation · Span</text>
+    </g>
+    <g stroke="#7787a8" stroke-width="3" marker-end="url(#arrow)"><path d="M300 290h62"/><path d="M620 290h62"/><path d="M940 290h62"/><path d="M1240 290h62"/></g>
+    <rect x="235" y="465" width="1130" height="115" rx="26" fill="#10182a" stroke="#667da9"/><text x="800" y="512" text-anchor="middle" fill="#f1f4ff" font-size="27" font-weight="750">Knowledge Gateway</text><text x="800" y="552" text-anchor="middle" fill="#aebbd6" font-size="20">Scope · Revision · Permission · Context Budget · Trace</text>
+    <path d="M1420 350v70H800v37" fill="none" stroke="#7787a8" stroke-width="3" marker-end="url(#arrow)"/>
+    <g text-anchor="middle"><rect x="260" y="675" width="440" height="110" rx="24" fill="#101d2b" stroke="#4e94d7"/><text x="480" y="721" fill="#76c5ff" font-size="25" font-weight="750">LLM Generate</text><text x="480" y="758" fill="#cbd8e8" font-size="19">基于 Evidence 组织回答</text><rect x="900" y="675" width="440" height="110" rx="24" fill="#241a28" stroke="#bd72c9"/><text x="1120" y="721" fill="#e89af2" font-size="25" font-weight="750">Agent Action</text><text x="1120" y="758" fill="#ead7ed" font-size="19">Tool + Permission + Approval</text></g>
+    <path d="M800 580v54H480v33M800 634h320v33" fill="none" stroke="#7787a8" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="800" y="855" text-anchor="middle" fill="#7584a2" font-size="18">RAG 不等于向量库；任何路线都必须把关键 Claim 落回带版本的 Source Evidence</text>
+  </g>
+</svg>

@@ -63,6 +63,10 @@ Raw Source
 
 这条链路里，Source 是事实，Index 是为了查询而生成的派生数据，Evidence 是本次回答实际采用的依据。三者不能混为一层。
 
+![RAG 全链路术语地图：从原始资料、索引到证据与动作](/images/rag-terminology-chain.webp)
+
+*先看一个词位于哪一层，再讨论它解决什么问题。Graph、Vector 和 Compiled Wiki 都只是中间的知识表示，最终仍要交付可追溯的 Evidence。*
+
 ### RAG、Context 与 Agent
 
 | 术语 | 通俗解释 | 在客服实战中的位置 |
@@ -218,6 +222,10 @@ Q3 稳定执行：
 
 时效要求不高、跨行业共用的知识问答可以沉到通用平台。和当前会话、订单状态、退款流程强绑定的能力，应留在客服工作台 Copilot 中。RAG 提供依据，业务 Tool 读取实时状态，Permission / Approval 决定能否执行。
 
+![三类客服问题如何路由到 Hybrid RAG、GraphRAG 与编译式 RAG](/images/rag-customer-service-routing.webp)
+
+*入口可以统一，知识路线不必统一。先识别问题需要一个片段、一条关系路径还是一套稳定流程，再路由到相应后端。*
+
 ## 第一轮：用向量 RAG 解决
 
 ### 数据怎样进入系统
@@ -246,6 +254,10 @@ Query
           ↓
    Evidence Top K
 ```
+
+![客服 Hybrid RAG 从 Query Rewrite 到 Evidence Top K 的检索流程](/images/rag-hybrid-retrieval-flow.webp)
+
+*所谓“向量 RAG”在生产里通常不是只查向量：BM25 守住精确词，Vector Search 处理同义表达，Metadata Filter 先排除过期和越权内容。*
 
 每个 Chunk 至少要保留：
 
@@ -309,6 +321,10 @@ GraphRAG 在构建阶段把文本转成实体和关系：
 ```
 
 查询 Q2 时，系统先定位“已取消订单”和“活动权益券”，再按允许的 Edge Type 遍历，最后把路径关联的原文片段一起交给模型。此时“为什么没有退回”不再靠模型从若干相似 Chunk 中猜，而是有一条显式路径。
+
+![GraphRAG 沿订单、权益券、政策与例外关系完成多跳解释](/images/rag-customer-graph-path.webp)
+
+*GraphRAG 解决的是“沿什么关系找到答案”，不是“图里的结论天然可信”。每一跳仍要锚定带版本的 Source Span。*
 
 微软的 [GraphRAG 官方索引流程](https://microsoft.github.io/graphrag/index/overview/)会从原文抽取 Entity、Relationship 和 Claim，做 Community Detection、生成 Community Report，并保留向量表示。它的 [Local Search](https://microsoft.github.io/graphrag/query/local_search/)会结合实体关系与原始 Text Unit，适合具体实体问题；Global Search 则基于 Community Report 做 Map-Reduce，更适合“整批资料有哪些主要主题”这类全局问题。
 
@@ -424,6 +440,10 @@ Agent 查询时先读 `index.md`，找到 Procedure，再沿链接读取相关 S
 - 上一次探索产生的有效结构能够被下一次复用。
 
 这更接近程序编译：开发者不会每次运行程序时都重新理解所有 Source Code，而是消费经过检查的 Artifact。
+
+![编译式 RAG 从原始资料到知识产物、查询与重编译的闭环](/images/rag-compiled-knowledge-loop.webp)
+
+*编译式 RAG 的核心不是提前写摘要，而是让知识产物进入版本、校验和重建闭环；查询时对关键 Claim 仍需回查原文。*
 
 ### 编译产物绝不能成为未经审查的新事实源
 
