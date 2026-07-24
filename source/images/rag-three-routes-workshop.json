@@ -1,0 +1,15 @@
+{
+  "file": "/images/rag-three-routes-workshop.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1672x941",
+  "generation_time_ms": 37285,
+  "generation_time_seconds": 37.28,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 67884,
+  "file_size_kb": 66.3,
+  "postprocess": "webp q72",
+  "prompt": "Horizontal editorial technical illustration, a single continuous knowledge workshop divided visually into three stations. On the left, document cards are mapped into luminous semantic coordinates and pulled toward a focused query beam. In the center, named concepts become a precise network of nodes and relationship paths, with one highlighted multi-hop route. On the right, raw documents pass through a mechanical compiler-like apparatus and emerge as clean structured interlinked knowledge pages. Dark near-black navy background, subtle engineering grid, cyan for retrieval, violet for graph relationships, warm amber for compilation, crisp isometric forms, restrained premium AI infrastructure aesthetic, strong visual hierarchy, no people. no text, no letters, no watermark, no brand marks, no platform logos.",
+  "created_at": "2026-07-24T14:00:38+0800"
+}

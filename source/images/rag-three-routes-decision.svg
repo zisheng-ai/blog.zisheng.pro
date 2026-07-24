@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">向量 RAG、GraphRAG、编译式 RAG 选型图</title>
+  <desc id="desc">按问题形状选择三条知识路线，并通过统一 Evidence Gateway 返回证据。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060914"/>
+      <stop offset="0.55" stop-color="#0b1022"/>
+      <stop offset="1" stop-color="#120b22"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#45d8ff"/>
+      <stop offset="1" stop-color="#3979ff"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c477ff"/>
+      <stop offset="1" stop-color="#7158ff"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd275"/>
+      <stop offset="1" stop-color="#ff884d"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#8ca0d8" stroke-opacity=".07"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="170" cy="135" r="250" fill="#1677ff" opacity=".07"/>
+  <circle cx="1400" cy="150" r="290" fill="#9c4dff" opacity=".08"/>
+
+  <text x="800" y="92" fill="#f7f8ff" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="58" font-weight="800" text-anchor="middle">三条 RAG 路线，到底怎么选</text>
+  <text x="800" y="140" fill="#9da9c9" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="24" text-anchor="middle">先看问题形状，再看数据结构；不要按“新旧版本”选技术</text>
+
+  <g transform="translate(105 225)">
+    <rect width="420" height="310" rx="28" fill="#0c1729" stroke="#45d8ff" stroke-opacity=".78" stroke-width="2"/>
+    <rect x="24" y="24" width="94" height="36" rx="18" fill="#123e57"/>
+    <text x="71" y="49" fill="#72e4ff" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" text-anchor="middle">LOOKUP</text>
+    <text x="28" y="112" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="38" font-weight="760">向量 RAG</text>
+    <text x="28" y="154" fill="#a9b9d6" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="21">自然语言找相近证据</text>
+    <line x1="28" y1="184" x2="392" y2="184" stroke="#45d8ff" stroke-opacity=".25"/>
+    <text x="28" y="222" fill="#d9e6fb" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20">适合：单事实、相似表达、大语料</text>
+    <text x="28" y="260" fill="#d9e6fb" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20">默认：Hybrid + Filter + Rerank</text>
+    <circle cx="368" cy="72" r="22" fill="none" stroke="url(#cyan)" stroke-width="7"/>
+    <path d="M385 89l24 24" stroke="#45d8ff" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(590 225)">
+    <rect width="420" height="310" rx="28" fill="#151027" stroke="#b76cff" stroke-opacity=".8" stroke-width="2"/>
+    <rect x="24" y="24" width="122" height="36" rx="18" fill="#372054"/>
+    <text x="85" y="49" fill="#d79bff" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" text-anchor="middle">RELATION</text>
+    <text x="28" y="112" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="38" font-weight="760">GraphRAG</text>
+    <text x="28" y="154" fill="#bdb0d9" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="21">沿实体与关系完成多跳推理</text>
+    <line x1="28" y1="184" x2="392" y2="184" stroke="#b76cff" stroke-opacity=".25"/>
+    <text x="28" y="222" fill="#eadffc" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20">适合：依赖链、影响面、全局主题</text>
+    <text x="28" y="260" fill="#eadffc" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20">前提：关系稳定且值得维护</text>
+    <g fill="#b76cff" filter="url(#glow)">
+      <circle cx="342" cy="55" r="10"/><circle cx="385" cy="83" r="10"/><circle cx="337" cy="111" r="10"/><circle cx="302" cy="78" r="10"/>
+    </g>
+    <g stroke="#b76cff" stroke-width="3" opacity=".9">
+      <path d="M342 55l43 28-48 28-35-33z"/><path d="M342 55l-5 56"/>
+    </g>
+  </g>
+
+  <g transform="translate(1075 225)">
+    <rect width="420" height="310" rx="28" fill="#21160f" stroke="#ffae62" stroke-opacity=".82" stroke-width="2"/>
+    <rect x="24" y="24" width="128" height="36" rx="18" fill="#56341d"/>
+    <text x="88" y="49" fill="#ffd08c" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" text-anchor="middle">REUSE</text>
+    <text x="28" y="112" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="38" font-weight="760">编译式 RAG</text>
+    <text x="28" y="154" fill="#d6bea9" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="21">把稳定知识预构建为可复用产物</text>
+    <line x1="28" y1="184" x2="392" y2="184" stroke="#ffae62" stroke-opacity=".25"/>
+    <text x="28" y="222" fill="#fae5d2" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20">适合：高频综合、流程、长期积累</text>
+    <text x="28" y="260" fill="#fae5d2" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20">前提：可评测、可重编译、可追溯</text>
+    <path d="M322 45h68v82h-68zM311 57h68M311 70h68" fill="#2a1b12" stroke="#ffb668" stroke-width="3"/>
+  </g>
+
+  <path d="M315 550v70h485M800 550v70M1285 550v70H800" fill="none" stroke="#64759e" stroke-width="3"/>
+  <path d="M800 620v42" stroke="#8ea6df" stroke-width="3"/>
+  <path d="M788 650l12 16 12-16" fill="none" stroke="#8ea6df" stroke-width="3"/>
+  <rect x="365" y="675" width="870" height="122" rx="30" fill="#10182b" stroke="#6f85ba" stroke-width="2"/>
+  <text x="800" y="725" fill="#f2f5ff" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="30" font-weight="750" text-anchor="middle">统一 Evidence Gateway</text>
+  <text x="800" y="765" fill="#aebbd7" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="21" text-anchor="middle">Scope · Revision · Permission · Citation · Trace · Context Budget</text>
+  <text x="800" y="850" fill="#687798" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" text-anchor="middle">Vector 是底座，Graph 与 Compilation 是按需增加的知识表示，不是升级路线</text>
+</svg>
