@@ -14,7 +14,7 @@ tags:
 cover: /images/rag-three-routes-decision.webp
 ---
 
-![向量 RAG、GraphRAG、编译式 RAG 选型图](/images/rag-three-routes-decision.webp)
+<img src="/images/rag-three-routes-decision.webp" data-lazy-src="/images/rag-three-routes-decision.webp" alt="向量 RAG、GraphRAG、编译式 RAG 选型图">
 
 *先看问题形状，再决定知识该被表示成 Chunk、Graph，还是可持续维护的编译产物。*
 
@@ -63,7 +63,7 @@ Raw Source
 
 这条链路里，Source 是事实，Index 是为了查询而生成的派生数据，Evidence 是本次回答实际采用的依据。三者不能混为一层。
 
-![RAG 全链路术语地图：从原始资料、索引到证据与动作](/images/rag-terminology-chain.webp)
+<img src="/images/rag-terminology-chain.webp" data-lazy-src="/images/rag-terminology-chain.webp" alt="RAG 全链路术语地图：从原始资料、索引到证据与动作">
 
 *先看一个词位于哪一层，再讨论它解决什么问题。Graph、Vector 和 Compiled Wiki 都只是中间的知识表示，最终仍要交付可追溯的 Evidence。*
 
@@ -222,7 +222,7 @@ Q3 稳定执行：
 
 时效要求不高、跨行业共用的知识问答可以沉到通用平台。和当前会话、订单状态、退款流程强绑定的能力，应留在客服工作台 Copilot 中。RAG 提供依据，业务 Tool 读取实时状态，Permission / Approval 决定能否执行。
 
-![三类客服问题如何路由到 Hybrid RAG、GraphRAG 与编译式 RAG](/images/rag-customer-service-routing.webp)
+<img src="/images/rag-customer-service-routing.webp" data-lazy-src="/images/rag-customer-service-routing.webp" alt="三类客服问题如何路由到 Hybrid RAG、GraphRAG 与编译式 RAG">
 
 *入口可以统一，知识路线不必统一。先识别问题需要一个片段、一条关系路径还是一套稳定流程，再路由到相应后端。*
 
@@ -255,7 +255,7 @@ Query
    Evidence Top K
 ```
 
-![客服 Hybrid RAG 从 Query Rewrite 到 Evidence Top K 的检索流程](/images/rag-hybrid-retrieval-flow.webp)
+<img src="/images/rag-hybrid-retrieval-flow.webp" data-lazy-src="/images/rag-hybrid-retrieval-flow.webp" alt="客服 Hybrid RAG 从 Query Rewrite 到 Evidence Top K 的检索流程">
 
 *所谓“向量 RAG”在生产里通常不是只查向量：BM25 守住精确词，Vector Search 处理同义表达，Metadata Filter 先排除过期和越权内容。*
 
@@ -322,7 +322,7 @@ GraphRAG 在构建阶段把文本转成实体和关系：
 
 查询 Q2 时，系统先定位“已取消订单”和“活动权益券”，再按允许的 Edge Type 遍历，最后把路径关联的原文片段一起交给模型。此时“为什么没有退回”不再靠模型从若干相似 Chunk 中猜，而是有一条显式路径。
 
-![GraphRAG 沿订单、权益券、政策与例外关系完成多跳解释](/images/rag-customer-graph-path.webp)
+<img src="/images/rag-customer-graph-path.webp" data-lazy-src="/images/rag-customer-graph-path.webp" alt="GraphRAG 沿订单、权益券、政策与例外关系完成多跳解释">
 
 *GraphRAG 解决的是“沿什么关系找到答案”，不是“图里的结论天然可信”。每一跳仍要锚定带版本的 Source Span。*
 
@@ -441,7 +441,7 @@ Agent 查询时先读 `index.md`，找到 Procedure，再沿链接读取相关 S
 
 这更接近程序编译：开发者不会每次运行程序时都重新理解所有 Source Code，而是消费经过检查的 Artifact。
 
-![编译式 RAG 从原始资料到知识产物、查询与重编译的闭环](/images/rag-compiled-knowledge-loop.webp)
+<img src="/images/rag-compiled-knowledge-loop.webp" data-lazy-src="/images/rag-compiled-knowledge-loop.webp" alt="编译式 RAG 从原始资料到知识产物、查询与重编译的闭环">
 
 *编译式 RAG 的核心不是提前写摘要，而是让知识产物进入版本、校验和重建闭环；查询时对关键 Claim 仍需回查原文。*
 
@@ -458,7 +458,7 @@ Agent 查询时先读 `index.md`，找到 Procedure，再沿链接读取相关 S
 
 ## 把三条路线放回同一张运行图
 
-![向量 RAG、GraphRAG、编译式 RAG 的构建时与查询时成本](/images/rag-three-routes-runtime.webp)
+<img src="/images/rag-three-routes-runtime.webp" data-lazy-src="/images/rag-three-routes-runtime.webp" alt="向量 RAG、GraphRAG、编译式 RAG 的构建时与查询时成本">
 
 *三条路线都在“预处理”，区别在于构建出了什么中间表示，以及查询时还要做多少工作。*
 
@@ -466,7 +466,7 @@ Agent 查询时先读 `index.md`，找到 Procedure，再沿链接读取相关 S
 
 生成的直觉图更容易看出这三个动作的差别：
 
-![从语义检索、关系网络到知识编译的三种工作方式](/images/rag-three-routes-workshop.webp)
+<img src="/images/rag-three-routes-workshop.webp" data-lazy-src="/images/rag-three-routes-workshop.webp" alt="从语义检索、关系网络到知识编译的三种工作方式">
 
 *向量路线在空间中找邻近片段；图路线沿关系走路径；编译路线把原始资料加工成可长期使用的知识产物。*
 
