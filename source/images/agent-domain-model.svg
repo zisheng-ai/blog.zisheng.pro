@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Agent 系统的一级领域对象</title>
+  <desc id="desc">从 Identity、Agent、Goal、Task、Run、Capability、Context、Policy 到 Artifact、Claim、Evidence 和 Evaluation 的领域关系图</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="0.58" stop-color="#0b1727"/>
+      <stop offset="1" stop-color="#0d2133"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36d1dc"/>
+      <stop offset="1" stop-color="#5b8cff"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b829d"/>
+    </marker>
+    <style>
+      .title { font: 700 58px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #f5f9ff; letter-spacing: -1px; }
+      .sub { font: 400 22px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #8fa7c0; }
+      .group-title { font: 600 17px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #7f9ab6; letter-spacing: 1.4px; }
+      .node-title { font: 650 24px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #f5f9ff; }
+      .node-sub { font: 400 15px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #9fb3c8; }
+      .edge-label { font: 500 13px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #7f96ad; }
+      .foot { font: 500 15px -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; fill: #91a9c1; }
+      .node { fill: #101f31; stroke: #29415a; stroke-width: 1.5; }
+      .node-accent { fill: #102536; stroke: #36c9d3; stroke-width: 1.8; }
+      .node-trust { fill: #111f37; stroke: #5b8cff; stroke-width: 1.8; }
+      .group { fill: #0c1929; stroke: #1e344a; stroke-width: 1.2; }
+      .edge { fill: none; stroke: #526a82; stroke-width: 2; marker-end: url(#arrow); }
+      .edge-hot { fill: none; stroke: url(#accent); stroke-width: 2.6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1330" cy="118" r="230" fill="#153b51" opacity="0.16"/>
+  <circle cx="155" cy="820" r="260" fill="#183a6b" opacity="0.11"/>
+  <path d="M0 164 H1600" stroke="#183149" stroke-width="1"/>
+
+  <text x="90" y="88" class="title">Agent 系统的一级领域对象</text>
+  <text x="92" y="128" class="sub">跨框架稳定存在的 Actor、Work、Execution、Control、Outcome 与 Trust</text>
+  <rect x="1272" y="66" width="238" height="50" rx="25" fill="#102d3c" stroke="#2f7385"/>
+  <text x="1391" y="98" text-anchor="middle" class="sub" fill="#79dce4">DOMAIN MODEL · AI INFRA</text>
+
+  <rect x="80" y="205" width="220" height="410" rx="26" class="group"/>
+  <text x="108" y="244" class="group-title">ACTOR</text>
+  <rect x="105" y="270" width="170" height="104" rx="18" class="node-accent"/>
+  <text x="190" y="312" text-anchor="middle" class="node-title">Identity</text>
+  <text x="190" y="342" text-anchor="middle" class="node-sub">谁授权 · 代表谁</text>
+  <rect x="105" y="420" width="170" height="120" rx="18" class="node-accent"/>
+  <text x="190" y="466" text-anchor="middle" class="node-title">Agent</text>
+  <text x="190" y="496" text-anchor="middle" class="node-sub">责任主体 · 持续版本</text>
+  <path d="M190 374 V416" class="edge-hot"/>
+  <text x="205" y="401" class="edge-label">authorizes</text>
+
+  <rect x="335" y="205" width="390" height="410" rx="26" class="group"/>
+  <text x="363" y="244" class="group-title">INTENT &amp; WORK</text>
+  <rect x="365" y="270" width="150" height="104" rx="18" class="node"/>
+  <text x="440" y="312" text-anchor="middle" class="node-title">Goal</text>
+  <text x="440" y="342" text-anchor="middle" class="node-sub">期望状态</text>
+  <rect x="545" y="270" width="150" height="104" rx="18" class="node"/>
+  <text x="620" y="312" text-anchor="middle" class="node-title">Task</text>
+  <text x="620" y="342" text-anchor="middle" class="node-sub">可跟踪工作</text>
+  <rect x="455" y="435" width="150" height="104" rx="18" class="node-accent"/>
+  <text x="530" y="477" text-anchor="middle" class="node-title">Run</text>
+  <text x="530" y="507" text-anchor="middle" class="node-sub">一次执行尝试</text>
+  <path d="M515 322 H541" class="edge"/>
+  <text x="527" y="309" text-anchor="middle" class="edge-label">decomposes</text>
+  <path d="M620 374 C620 404 581 415 555 433" class="edge-hot"/>
+  <text x="618" y="410" class="edge-label">attempted by</text>
+  <path d="M275 480 H451" class="edge-hot"/>
+  <text x="363" y="465" text-anchor="middle" class="edge-label">executes</text>
+
+  <rect x="760" y="205" width="300" height="410" rx="26" class="group"/>
+  <text x="788" y="244" class="group-title">EXECUTION</text>
+  <rect x="790" y="270" width="240" height="104" rx="18" class="node"/>
+  <text x="910" y="312" text-anchor="middle" class="node-title">Capability</text>
+  <text x="910" y="342" text-anchor="middle" class="node-sub">能做什么 · 实现可替换</text>
+  <rect x="790" y="435" width="240" height="104" rx="18" class="node"/>
+  <text x="910" y="477" text-anchor="middle" class="node-title">Context</text>
+  <text x="910" y="507" text-anchor="middle" class="node-sub">本次获准使用的信息边界</text>
+  <path d="M605 470 C680 430 720 353 786 329" class="edge"/>
+  <text x="694" y="386" class="edge-label">uses</text>
+  <path d="M605 495 H786" class="edge"/>
+  <text x="696" y="481" text-anchor="middle" class="edge-label">reads snapshot</text>
+
+  <rect x="1095" y="205" width="425" height="410" rx="26" class="group"/>
+  <text x="1123" y="244" class="group-title">OUTCOME &amp; TRUST</text>
+  <rect x="1125" y="270" width="160" height="104" rx="18" class="node"/>
+  <text x="1205" y="312" text-anchor="middle" class="node-title">Artifact</text>
+  <text x="1205" y="342" text-anchor="middle" class="node-sub">持久交付物</text>
+  <rect x="1325" y="270" width="165" height="104" rx="18" class="node"/>
+  <text x="1407" y="312" text-anchor="middle" class="node-title">Claim</text>
+  <text x="1407" y="342" text-anchor="middle" class="node-sub">可验证断言</text>
+  <rect x="1125" y="435" width="160" height="104" rx="18" class="node-trust" filter="url(#glow)"/>
+  <text x="1205" y="477" text-anchor="middle" class="node-title">Evidence</text>
+  <text x="1205" y="507" text-anchor="middle" class="node-sub">可追溯事实</text>
+  <rect x="1325" y="435" width="165" height="104" rx="18" class="node-trust"/>
+  <text x="1407" y="477" text-anchor="middle" class="node-title">Evaluation</text>
+  <text x="1407" y="507" text-anchor="middle" class="node-sub">依据标准判断</text>
+  <path d="M1285 322 H1321" class="edge"/>
+  <path d="M1285 487 C1330 487 1345 400 1388 377" class="edge-hot"/>
+  <text x="1338" y="432" class="edge-label">supports</text>
+  <path d="M1407 431 V378" class="edge-hot"/>
+  <text x="1422" y="410" class="edge-label">judges</text>
+  <path d="M1030 322 H1121" class="edge"/>
+  <text x="1075" y="308" text-anchor="middle" class="edge-label">produces</text>
+  <path d="M1030 486 H1121" class="edge-hot"/>
+  <text x="1075" y="472" text-anchor="middle" class="edge-label">observes</text>
+
+  <rect x="335" y="650" width="1185" height="130" rx="26" fill="#0c1929" stroke="#25435c"/>
+  <text x="365" y="690" class="group-title">CONTROL PLANE</text>
+  <rect x="365" y="710" width="205" height="46" rx="14" class="node-trust"/>
+  <text x="467" y="740" text-anchor="middle" class="node-title" font-size="20">Policy</text>
+  <text x="605" y="738" class="foot">约束 Identity、Capability、Context 与 Run；定义哪些动作需要 Approval，哪些 Claim 必须有 Evidence。</text>
+  <path d="M530 650 V543" class="edge-hot"/>
+
+  <text x="90" y="846" class="foot">FIRST-CLASS TEST</text>
+  <text x="278" y="846" class="foot" fill="#d5e3f2">Stable ID</text>
+  <circle cx="379" cy="841" r="3" fill="#36d1dc"/>
+  <text x="398" y="846" class="foot" fill="#d5e3f2">Lifecycle</text>
+  <circle cx="496" cy="841" r="3" fill="#36d1dc"/>
+  <text x="515" y="846" class="foot" fill="#d5e3f2">Business Rules</text>
+  <circle cx="651" cy="841" r="3" fill="#36d1dc"/>
+  <text x="670" y="846" class="foot" fill="#d5e3f2">Cross-module Relations</text>
+  <circle cx="872" cy="841" r="3" fill="#36d1dc"/>
+  <text x="891" y="846" class="foot" fill="#d5e3f2">Survives Framework Swap</text>
+  <text x="1510" y="846" text-anchor="end" class="foot">blog.zisheng.pro</text>
+</svg>
