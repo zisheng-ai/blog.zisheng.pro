@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">可验证、可恢复、可评测的 Agent Runtime 与 Harness</title>
+  <desc id="desc">Agent Harness 以稳定 Run Contract、受控副作用和持久状态包围 Model 与 Tools，并输出 Verification、Recovery 和 Evaluation。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.5" stop-color="#10182c"/>
+      <stop offset="1" stop-color="#150d2c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#37d8ff"/>
+      <stop offset="1" stop-color="#9a68ff"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172b48"/>
+      <stop offset="1" stop-color="#251c4b"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .sans{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Inter,Arial,sans-serif}
+      .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+      .muted{fill:#8fa3bd}
+      .line{stroke:#3f5673;stroke-width:2;fill:none}
+      .dash{stroke:#52647e;stroke-width:2;stroke-dasharray:8 10;fill:none}
+      .card{fill:#0d192a;stroke:#29415f;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="80" r="260" fill="#7252ff" opacity="0.08"/>
+  <circle cx="180" cy="850" r="310" fill="#12c9ef" opacity="0.06"/>
+  <g opacity="0.14" stroke="#6a82a4" stroke-width="1">
+    <path d="M0 180H1600M0 360H1600M0 540H1600M0 720H1600"/>
+    <path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900"/>
+  </g>
+
+  <g class="sans">
+    <text x="110" y="106" fill="#eaf5ff" font-size="52" font-weight="750">Agent Runtime / Harness</text>
+    <text x="110" y="158" fill="#a9bad1" font-size="26">把概率性的 Agent，放进确定性的工程边界</text>
+    <rect x="111" y="187" width="520" height="5" rx="2.5" fill="url(#accent)"/>
+  </g>
+
+  <g class="sans">
+    <rect x="110" y="252" width="310" height="128" rx="22" class="card"/>
+    <circle cx="164" cy="305" r="24" fill="#153d4d" stroke="#37d8ff" stroke-width="2"/>
+    <path d="M153 305l8 8 16-18" stroke="#7be9ff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="204" y="310" fill="#dff8ff" font-size="29" font-weight="700">可验证</text>
+    <text x="152" y="350" class="muted" font-size="19">Claim → Evidence → Acceptance</text>
+
+    <rect x="110" y="408" width="310" height="128" rx="22" class="card"/>
+    <circle cx="164" cy="461" r="24" fill="#203454" stroke="#6fa5ff" stroke-width="2"/>
+    <path d="M176 454a14 14 0 1 0 1 15M176 454v-10m0 10h-10" stroke="#9bc0ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="204" y="466" fill="#e5efff" font-size="29" font-weight="700">可恢复</text>
+    <text x="152" y="506" class="muted" font-size="19">Checkpoint → Idempotency → Resume</text>
+
+    <rect x="110" y="564" width="310" height="128" rx="22" class="card"/>
+    <circle cx="164" cy="617" r="24" fill="#342653" stroke="#a878ff" stroke-width="2"/>
+    <path d="M151 626v-10m10 10v-20m10 20v-30" stroke="#c5a7ff" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="204" y="622" fill="#f1eaff" font-size="29" font-weight="700">可评测</text>
+    <text x="152" y="662" class="muted" font-size="19">Outcome + Process + Cost + Robustness</text>
+  </g>
+
+  <g>
+    <path d="M420 316H514M420 472H514M420 628H514" class="line"/>
+    <circle cx="514" cy="316" r="5" fill="#37d8ff"/>
+    <circle cx="514" cy="472" r="5" fill="#6fa5ff"/>
+    <circle cx="514" cy="628" r="5" fill="#a878ff"/>
+  </g>
+
+  <g class="sans">
+    <rect x="515" y="232" width="655" height="500" rx="34" fill="#0a1424" stroke="url(#accent)" stroke-width="3"/>
+    <text x="558" y="282" fill="#dcecff" font-size="22" font-weight="700" letter-spacing="2">HARNESS CONTROL PLANE</text>
+    <text x="1118" y="282" fill="#6f87a5" font-size="16" text-anchor="end">stable contract</text>
+
+    <rect x="558" y="310" width="570" height="74" rx="16" fill="#11243a" stroke="#315477"/>
+    <text x="843" y="340" fill="#83ddff" font-size="17" text-anchor="middle" font-weight="650">RUN CONTRACT</text>
+    <text x="843" y="367" fill="#9fb2ca" font-size="18" text-anchor="middle">Run ID · Workspace · Revision · Event · Version</text>
+
+    <rect x="558" y="410" width="174" height="82" rx="16" fill="#101f32" stroke="#2c4969"/>
+    <text x="645" y="443" fill="#d8e8fb" font-size="18" text-anchor="middle" font-weight="650">Policy</text>
+    <text x="645" y="470" fill="#849bb7" font-size="15" text-anchor="middle">Permission · Approval</text>
+
+    <rect x="756" y="410" width="174" height="82" rx="16" fill="#101f32" stroke="#2c4969"/>
+    <text x="843" y="443" fill="#d8e8fb" font-size="18" text-anchor="middle" font-weight="650">Tool Gateway</text>
+    <text x="843" y="470" fill="#849bb7" font-size="15" text-anchor="middle">Schema · Side Effect</text>
+
+    <rect x="954" y="410" width="174" height="82" rx="16" fill="#101f32" stroke="#2c4969"/>
+    <text x="1041" y="443" fill="#d8e8fb" font-size="18" text-anchor="middle" font-weight="650">Checkpoint</text>
+    <text x="1041" y="470" fill="#849bb7" font-size="15" text-anchor="middle">State · Resume</text>
+
+    <rect x="558" y="518" width="570" height="156" rx="24" fill="url(#core)" stroke="#495d84" stroke-width="2"/>
+    <text x="843" y="556" fill="#bbcbdf" font-size="16" text-anchor="middle" letter-spacing="1.5">RUNTIME ADAPTER</text>
+    <rect x="593" y="577" width="500" height="65" rx="16" fill="#091423" stroke="#526e94"/>
+    <circle cx="634" cy="610" r="12" fill="#37d8ff" opacity="0.9" filter="url(#glow)"/>
+    <text x="667" y="607" fill="#ecf7ff" font-size="21" font-weight="700">Agent Loop</text>
+    <text x="667" y="629" fill="#8fa3bd" font-size="14">Model · Tool Selection · Handoff · Streaming</text>
+  </g>
+
+  <g>
+    <path d="M1170 354H1240V396" class="dash"/>
+    <path d="M1170 594H1240V552" class="dash"/>
+    <circle cx="1240" cy="474" r="72" fill="#111c31" stroke="#526b94" stroke-width="2"/>
+    <circle cx="1240" cy="474" r="44" fill="#17294a" stroke="#37d8ff" stroke-width="2" opacity="0.95"/>
+    <path d="M1221 474h38M1240 455v38" stroke="#9beeff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g class="sans">
+    <rect x="1322" y="292" width="184" height="78" rx="16" fill="#0d192a" stroke="#29415f"/>
+    <text x="1414" y="323" fill="#dcecff" font-size="18" text-anchor="middle" font-weight="650">Model / SDK</text>
+    <text x="1414" y="349" fill="#8398b4" font-size="15" text-anchor="middle">probabilistic</text>
+    <rect x="1322" y="410" width="184" height="78" rx="16" fill="#0d192a" stroke="#29415f"/>
+    <text x="1414" y="441" fill="#dcecff" font-size="18" text-anchor="middle" font-weight="650">Tools</text>
+    <text x="1414" y="467" fill="#8398b4" font-size="15" text-anchor="middle">real side effects</text>
+    <rect x="1322" y="528" width="184" height="78" rx="16" fill="#0d192a" stroke="#29415f"/>
+    <text x="1414" y="559" fill="#dcecff" font-size="18" text-anchor="middle" font-weight="650">Environment</text>
+    <text x="1414" y="585" fill="#8398b4" font-size="15" text-anchor="middle">server · sandbox</text>
+    <path d="M1312 331H1284V474H1312M1312 449H1284M1312 567H1284V474" class="line"/>
+  </g>
+
+  <g class="sans">
+    <rect x="515" y="770" width="991" height="66" rx="18" fill="#0d192a" stroke="#2a4262"/>
+    <text x="558" y="811" fill="#6de5ff" font-size="18" font-weight="700">Stable:</text>
+    <text x="635" y="811" fill="#c4d2e4" font-size="18">Run · Policy · State · Evidence · Eval</text>
+    <text x="1040" y="811" fill="#a983ff" font-size="18" font-weight="700">Replaceable:</text>
+    <text x="1160" y="811" fill="#c4d2e4" font-size="18">Model · Provider · Framework</text>
+  </g>
+</svg>
