@@ -406,3 +406,29 @@ Memory + Approval + Workspace + Handoff + Trigger + Budget + Version
 这套模型给我的最大帮助，是把 Agent Platform 从“模型、Prompt、Tool 的配置集合”重新理解成责任系统：Agent 承担工作，Run 改变环境，Artifact 承载结果，Claim 表达结论，Evidence 与 Evaluation 决定我们能否相信它。
 
 真正进入生产后，模型能力会持续变化，Runtime 也可以替换。长期稳定的资产，是这些领域对象及其关系。
+
+## 参考索引
+
+本文优先采用协议规范、标准本体和框架官方文档。下面列出的不是泛泛的“相关阅读”，而是实际参与本文领域对象归纳和边界判断的研究依据。检索日期：2026-08-02。
+
+| 范畴 | 参考资料 | 本文采用的依据 | 使用边界 |
+| --- | --- | --- | --- |
+| Provenance / Trust | [W3C PROV-O：The PROV Ontology](https://www.w3.org/TR/prov-o/) | Agent、Activity、Entity 组成的最小 Provenance 骨架，以及归属、生成、使用等关系 | PROV-O 描述来源与过程，不直接给出 Agent 产品的完整业务模型 |
+| Agent Interoperability | [A2A Protocol Specification 1.0](https://a2a-protocol.org/latest/specification/) | Agent Card、Task、Message、Artifact、Context 等跨 Agent 协作对象的定义与生命周期 | A2A 是互操作协议；本文没有把所有协议对象都提升为一级领域对象 |
+| Capability Interface | [Model Context Protocol：Architecture Overview](https://modelcontextprotocol.io/docs/learn/architecture) | Tools、Resources、Prompts 的职责划分，用于区分 Capability、Context 与实现接口 | MCP 解决 Host、Client、Server 之间的上下文与能力交换，不等于完整 Agent 领域模型 |
+| Agent Runtime | [OpenAI Agents SDK Documentation](https://openai.github.io/openai-agents-python/) | Agent、Runner、Tools、Handoffs、Guardrails、Sessions、Tracing 等 Runtime Primitive | SDK 类名会随框架变化，因此只用于提取稳定语义，不直接照搬为业务对象 |
+| Approval / Resume | [OpenAI Agents SDK：Human-in-the-loop](https://openai.github.io/openai-agents-python/human_in_the_loop/) | Tool Approval、Run 暂停、序列化和恢复机制，用于判断 Approval 何时应拥有独立生命周期 | 短时审批仍可保留为 Run Event；跨时段、可失效审批才建议升级为一级对象 |
+| Agent Architecture | [Anthropic：Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents) | Workflow 与 Agent 的区别、Tool Use、Evaluator-optimizer 等编排模式 | 这是一组工程模式，不是领域对象标准；本文主要用它校验 Workflow、Graph、Evaluation 的边界 |
+| State / Memory | [LangGraph Documentation：Memory](https://docs.langchain.com/oss/python/concepts/memory) | Short-term Memory、Long-term Memory、Thread、Checkpoint 的作用域与持久化边界 | Memory 是否成为一级对象，取决于是否跨 Run 管理并具备来源、纠错、删除和保留策略 |
+
+### 综合方法与结论边界
+
+行业目前没有一份统一规范宣布“Agent 系统必须包含十二个一级领域对象”。本文的十二对象模型，是把上述资料放进同一套判据后得到的领域建模结论：对象需要具备相对稳定的 ID、生命周期、业务规则和跨对象关系，并且在替换 Model、Runtime 或 Protocol 后仍然成立。
+
+因此，文中的分类需要区分三种性质：
+
+1. **规范直接定义**：例如 W3C PROV 的 Agent、Activity、Entity，A2A 的 Task 与 Artifact。
+2. **框架暴露的 Runtime Primitive**：例如 Runner、Session、Handoff、Guardrail、Checkpoint。
+3. **本文综合推导的领域对象**：例如把 Claim 与 Evidence 分离，把 Policy 提升为控制面对象，以及将十二个对象组织为 Actor、Work、Execution、Control、Outcome、Trust 六组。
+
+这也意味着，十二个对象是一套用于架构决策的参考模型，不是对任何单一 SDK 或协议的重新命名。
