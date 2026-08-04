@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence 与相近概念的边界</title>
+  <desc id="desc">Source、Citation、Context、Trace、Artifact 和 Proof 位于 Evidence 周边，Evidence 支撑 Claim，Evaluation 基于 Policy 进行判断。</desc>
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08101d"/><stop offset="1" stop-color="#11182b"/></linearGradient>
+    <pattern id="grid4" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#8293b0" stroke-opacity=".06"/></pattern>
+    <marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#7085a5"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg4)"/><rect width="1600" height="900" fill="url(#grid4)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="80" y="88" fill="#f4f8ff" font-size="48" font-weight="820">不要把所有“有用的信息”都叫 Evidence</text>
+    <text x="82" y="135" fill="#94a5c0" font-size="22">相邻对象可以提供材料、定位、过程或完整性，但它们承担不同的领域责任</text>
+
+    <rect x="590" y="285" width="420" height="250" rx="38" fill="#103137" stroke="#3fd0c2" stroke-width="4"/>
+    <text x="800" y="350" text-anchor="middle" fill="#76e8dc" font-size="18" font-weight="700">TRUST OBJECT</text>
+    <text x="800" y="420" text-anchor="middle" fill="#f3fffd" font-size="46" font-weight="850">Evidence</text>
+    <text x="800" y="468" text-anchor="middle" fill="#b4dfda" font-size="19">Claim-relative · Scoped · Traceable</text>
+    <rect x="668" y="493" width="264" height="44" rx="14" fill="#143f40"/>
+    <text x="800" y="522" text-anchor="middle" fill="#75ddd3" font-size="16">supports / refutes Claim</text>
+
+    <g>
+      <rect x="70" y="230" width="270" height="130" rx="24" fill="#111d2c" stroke="#456281"/>
+      <text x="100" y="275" fill="#88a5c5" font-size="15" font-weight="700">ORIGIN</text><text x="100" y="320" fill="#eef4fd" font-size="29" font-weight="800">Source</text>
+      <text x="100" y="345" fill="#91a4bc" font-size="15">信息来自哪里</text>
+
+      <rect x="70" y="430" width="270" height="130" rx="24" fill="#111d2c" stroke="#456281"/>
+      <text x="100" y="475" fill="#88a5c5" font-size="15" font-weight="700">POINTER</text><text x="100" y="520" fill="#eef4fd" font-size="29" font-weight="800">Citation</text>
+      <text x="100" y="545" fill="#91a4bc" font-size="15">去哪里复查</text>
+
+      <rect x="70" y="630" width="270" height="130" rx="24" fill="#111d2c" stroke="#456281"/>
+      <text x="100" y="675" fill="#88a5c5" font-size="15" font-weight="700">INPUT BOUNDARY</text><text x="100" y="720" fill="#eef4fd" font-size="29" font-weight="800">Context</text>
+      <text x="100" y="745" fill="#91a4bc" font-size="15">Run 获准看到什么</text>
+
+      <rect x="1260" y="230" width="270" height="130" rx="24" fill="#1a2034" stroke="#7079cf"/>
+      <text x="1290" y="275" fill="#a7afea" font-size="15" font-weight="700">PROCESS RECORD</text><text x="1290" y="320" fill="#f4f5ff" font-size="29" font-weight="800">Trace</text>
+      <text x="1290" y="345" fill="#a7acc4" font-size="15">系统记录到什么过程</text>
+
+      <rect x="1260" y="430" width="270" height="130" rx="24" fill="#1a2034" stroke="#7079cf"/>
+      <text x="1290" y="475" fill="#a7afea" font-size="15" font-weight="700">DELIVERABLE</text><text x="1290" y="520" fill="#f4f5ff" font-size="29" font-weight="800">Artifact</text>
+      <text x="1290" y="545" fill="#a7acc4" font-size="15">Agent 交付了什么</text>
+
+      <rect x="1260" y="630" width="270" height="130" rx="24" fill="#201c30" stroke="#a371c5"/>
+      <text x="1290" y="675" fill="#c79be1" font-size="15" font-weight="700">INTEGRITY</text><text x="1290" y="720" fill="#fff5ff" font-size="29" font-weight="800">Proof</text>
+      <text x="1290" y="745" fill="#c1aec9" font-size="15">签发者与内容是否可信</text>
+    </g>
+
+    <g fill="none" stroke="#7085a5" stroke-width="3" marker-end="url(#a4)"><path d="M340 295h238"/><path d="M340 495h238"/><path d="M340 695h305q45 0 45-45v-102"/><path d="M1260 295h-238"/><path d="M1260 495h-238"/><path d="M1260 695h-305q-45 0-45-45v-102"/></g>
+    <rect x="590" y="650" width="420" height="110" rx="25" fill="#211d33" stroke="#a573cc" stroke-width="2"/>
+    <text x="800" y="693" text-anchor="middle" fill="#cda5e6" font-size="16" font-weight="700">EVALUATION</text>
+    <text x="800" y="734" text-anchor="middle" fill="#fff7ff" font-size="25" font-weight="800">基于 Policy 判断 Evidence Bundle</text>
+    <path d="M800 535v102" fill="none" stroke="#9a7abb" stroke-width="3" marker-end="url(#a4)"/>
+    <text x="800" y="835" text-anchor="middle" fill="#8d9eb8" font-size="20">相邻对象可以扮演 Evidence 的来源或载体，但不会自动获得证明力</text>
+  </g>
+</svg>

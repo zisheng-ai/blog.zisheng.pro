@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Coding Agent 的交付 Claim 与 Evidence 阶梯</title>
+  <desc id="desc">从代码修改、构建、提交、推送、部署到生产验收，每一级 Claim 都需要不同的 Evidence，低一层证据不能替代高一层证明。</desc>
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07101d"/><stop offset="1" stop-color="#111a2e"/></linearGradient>
+    <pattern id="grid5" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#8192b0" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg5)"/><rect width="1600" height="900" fill="url(#grid5)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="80" y="88" fill="#f4f8ff" font-size="48" font-weight="820">“已经发布”不是一个 Claim，而是一组验证阶梯</text>
+    <text x="82" y="135" fill="#94a5c0" font-size="22">低一层 Evidence 不能替代高一层证明：Build Passed ≠ Production Verified</text>
+
+    <g>
+      <path d="M90 720h225V620h225V520h225V420h225V320h225V220h315v570H90z" fill="#0f1828" stroke="#334863" stroke-width="2"/>
+
+      <rect x="105" y="635" width="195" height="70" rx="16" fill="#132237" stroke="#456e9c"/>
+      <text x="202" y="662" text-anchor="middle" fill="#83a8d2" font-size="14" font-weight="700">CLAIM 1</text>
+      <text x="202" y="691" text-anchor="middle" fill="#eff5ff" font-size="21" font-weight="800">代码已修改</text>
+      <text x="202" y="755" text-anchor="middle" fill="#8fa1b9" font-size="16">Git Diff · Scope</text>
+
+      <rect x="330" y="535" width="195" height="70" rx="16" fill="#122a34" stroke="#3d9ea5"/>
+      <text x="427" y="562" text-anchor="middle" fill="#72cbd0" font-size="14" font-weight="700">CLAIM 2</text>
+      <text x="427" y="591" text-anchor="middle" fill="#efffff" font-size="21" font-weight="800">工程验证通过</text>
+      <text x="427" y="655" text-anchor="middle" fill="#8faeb5" font-size="16">Tests · Build · Exit Code</text>
+
+      <rect x="555" y="435" width="195" height="70" rx="16" fill="#18243a" stroke="#577fc4"/>
+      <text x="652" y="462" text-anchor="middle" fill="#8cafee" font-size="14" font-weight="700">CLAIM 3</text>
+      <text x="652" y="491" text-anchor="middle" fill="#f2f6ff" font-size="21" font-weight="800">版本已提交</text>
+      <text x="652" y="555" text-anchor="middle" fill="#96a7c0" font-size="16">Commit SHA · Tree Hash</text>
+
+      <rect x="780" y="335" width="195" height="70" rx="16" fill="#1d213c" stroke="#777fe1"/>
+      <text x="877" y="362" text-anchor="middle" fill="#aeb3f5" font-size="14" font-weight="700">CLAIM 4</text>
+      <text x="877" y="391" text-anchor="middle" fill="#f6f6ff" font-size="21" font-weight="800">版本已推送</text>
+      <text x="877" y="455" text-anchor="middle" fill="#a6abc4" font-size="16">Remote Ref → Commit</text>
+
+      <rect x="1005" y="235" width="195" height="70" rx="16" fill="#25213a" stroke="#9a74d9"/>
+      <text x="1102" y="262" text-anchor="middle" fill="#c3a3ef" font-size="14" font-weight="700">CLAIM 5</text>
+      <text x="1102" y="291" text-anchor="middle" fill="#fbf6ff" font-size="21" font-weight="800">版本已部署</text>
+      <text x="1102" y="355" text-anchor="middle" fill="#b8a9c7" font-size="16">Deployment ID · Env State</text>
+
+      <rect x="1230" y="235" width="260" height="120" rx="20" fill="#10352c" stroke="#42d193" stroke-width="3"/>
+      <text x="1360" y="267" text-anchor="middle" fill="#75e2aa" font-size="14" font-weight="700">CLAIM 6</text>
+      <text x="1360" y="302" text-anchor="middle" fill="#effff6" font-size="23" font-weight="850">生产结果符合预期</text>
+      <text x="1360" y="333" text-anchor="middle" fill="#a9d4bd" font-size="15">Version Fingerprint · Real UX</text>
+    </g>
+
+    <g>
+      <rect x="180" y="805" width="1240" height="52" rx="18" fill="#291b25" stroke="#b45c78"/>
+      <text x="800" y="839" text-anchor="middle" fill="#f394ae" font-size="20" font-weight="750">Build Passed ≠ Deployed　|　Git Pushed ≠ Production Updated　|　HTTP 200 ≠ Expected Version Served</text>
+    </g>
+  </g>
+</svg>

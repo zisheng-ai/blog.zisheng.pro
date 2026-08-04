@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence 对象解剖图</title>
+  <desc id="desc">Evidence 对象以 Claim Binding 为核心，组合 Source and Locator、Scope、Time、Provenance、Integrity 和 Lifecycle。</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#10182c"/></linearGradient>
+    <pattern id="grid3" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#8091b1" stroke-opacity=".055"/></pattern>
+    <marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#6e86a9"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg3)"/><rect width="1600" height="900" fill="url(#grid3)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="80" y="88" fill="#f4f8ff" font-size="48" font-weight="820">Evidence 不是一个 Blob，而是一封可验证信封</text>
+    <text x="82" y="135" fill="#94a5c0" font-size="22">内容只是其中一部分；真正决定可复查性的，是关系、范围和来源</text>
+
+    <rect x="500" y="215" width="600" height="505" rx="36" fill="#0f2830" stroke="#42c9bc" stroke-width="3"/>
+    <rect x="540" y="255" width="520" height="105" rx="22" fill="#123b3d" stroke="#50d6c9"/>
+    <text x="580" y="294" fill="#7ce8de" font-size="16" font-weight="700">CORE RELATION</text>
+    <text x="580" y="335" fill="#f2fffd" font-size="28" font-weight="800">Claim Binding</text>
+    <text x="1025" y="335" text-anchor="end" fill="#aee1dc" font-size="18">claimId · supports / refutes</text>
+
+    <g>
+      <rect x="540" y="390" width="245" height="125" rx="20" fill="#132237" stroke="#4e73a0"/>
+      <text x="565" y="426" fill="#84a6cf" font-size="15" font-weight="700">SOURCE &amp; LOCATOR</text>
+      <text x="565" y="465" fill="#eef4ff" font-size="22" font-weight="750">sourceRef · locator</text>
+      <text x="565" y="494" fill="#93a5bd" font-size="16">snapshotRef · digest</text>
+
+      <rect x="815" y="390" width="245" height="125" rx="20" fill="#1b2038" stroke="#777fdb"/>
+      <text x="840" y="426" fill="#aab0f1" font-size="15" font-weight="700">SCOPE</text>
+      <text x="840" y="465" fill="#f4f5ff" font-size="22" font-weight="750">env · revision</text>
+      <text x="840" y="494" fill="#a7acc5" font-size="16">subject · tenant</text>
+
+      <rect x="540" y="545" width="245" height="125" rx="20" fill="#201d31" stroke="#a173cb"/>
+      <text x="565" y="581" fill="#c89ae7" font-size="15" font-weight="700">TIME &amp; LIFECYCLE</text>
+      <text x="565" y="620" fill="#fff5ff" font-size="22" font-weight="750">observedAt · validAt</text>
+      <text x="565" y="649" fill="#c0acc8" font-size="16">expiresAt · status</text>
+
+      <rect x="815" y="545" width="245" height="125" rx="20" fill="#24271c" stroke="#b8a34e"/>
+      <text x="840" y="581" fill="#d9c36e" font-size="15" font-weight="700">PROVENANCE &amp; INTEGRITY</text>
+      <text x="840" y="620" fill="#fffbe9" font-size="22" font-weight="750">collectedBy · runId</text>
+      <text x="840" y="649" fill="#c9c29f" font-size="16">captureMethod · signature</text>
+    </g>
+
+    <g>
+      <rect x="70" y="270" width="300" height="135" rx="24" fill="#111c2b" stroke="#3e5573"/>
+      <text x="100" y="314" fill="#8196b3" font-size="15" font-weight="700">CONTENT ROLE</text>
+      <text x="100" y="355" fill="#f0f4fb" font-size="25" font-weight="800">事实内容</text>
+      <text x="100" y="384" fill="#95a5bc" font-size="16">Span · State · Test Result</text>
+
+      <rect x="70" y="525" width="300" height="135" rx="24" fill="#111c2b" stroke="#3e5573"/>
+      <text x="100" y="569" fill="#8196b3" font-size="15" font-weight="700">EVIDENCE TYPE</text>
+      <text x="100" y="610" fill="#f0f4fb" font-size="25" font-weight="800">证据类型</text>
+      <text x="100" y="639" fill="#95a5bc" font-size="16">Screenshot · Attestation · Digest</text>
+
+      <rect x="1230" y="270" width="300" height="135" rx="24" fill="#191f34" stroke="#626fc1"/>
+      <text x="1260" y="314" fill="#a7afea" font-size="15" font-weight="700">CONSUMED BY</text>
+      <text x="1260" y="355" fill="#f5f6ff" font-size="25" font-weight="800">Claim Verifier</text>
+      <text x="1260" y="384" fill="#a7acc4" font-size="16">Policy · Threshold · Conflict</text>
+
+      <rect x="1230" y="525" width="300" height="135" rx="24" fill="#201b31" stroke="#9667bf"/>
+      <text x="1260" y="569" fill="#c698e2" font-size="15" font-weight="700">DERIVED OUTPUT</text>
+      <text x="1260" y="610" fill="#fff5ff" font-size="25" font-weight="800">Verification Result</text>
+      <text x="1260" y="639" fill="#c2aecb" font-size="16">verified · refuted · insufficient</text>
+    </g>
+
+    <g fill="none" stroke="#6e86a9" stroke-width="3" marker-end="url(#a3)"><path d="M370 337h118"/><path d="M370 592h118"/><path d="M1100 337h118"/><path d="M1100 592h118"/></g>
+    <text x="800" y="810" text-anchor="middle" fill="#8fa2bf" font-size="21">Confidence 属于 Evaluation Result，不应成为 Evidence 脱离 Claim 的全局属性</text>
+  </g>
+</svg>

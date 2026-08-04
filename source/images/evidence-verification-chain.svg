@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence 在 Agent 系统中的验证链路</title>
+  <desc id="desc">Source 和 Observation 被固化为 Evidence，Evidence 支持或反驳 Claim，Evaluation 根据 Policy 产生 Verification Result。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07101d"/><stop offset="1" stop-color="#0e1830"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="44%" r="55%"><stop stop-color="#235fb4" stop-opacity=".24"/><stop offset="1" stop-color="#07101d" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#7d91bc" stroke-opacity=".07"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0l10 5-10 5z" fill="#7c91b8"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#020611" flood-opacity=".45"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#glow)"/><rect width="1600" height="900" fill="url(#grid)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="86" y="92" fill="#f7faff" font-size="50" font-weight="800">Evidence：Agent 如何证明自己真的完成了任务</text>
+    <text x="88" y="140" fill="#9fb0cc" font-size="22">Evidence 不是日志附件，而是 Claim 与可复查事实之间的信任关系</text>
+    <text x="1490" y="92" text-anchor="end" fill="#62d7e7" font-size="17" font-weight="700">TRUST &amp; VERIFICATION</text>
+
+    <g filter="url(#shadow)">
+      <rect x="70" y="240" width="250" height="190" rx="28" fill="#101c2d" stroke="#355173" stroke-width="2"/>
+      <text x="195" y="294" text-anchor="middle" fill="#9eb5d5" font-size="17" font-weight="700">RAW MATERIAL</text>
+      <text x="195" y="345" text-anchor="middle" fill="#f2f6fd" font-size="31" font-weight="800">Source</text>
+      <text x="195" y="382" text-anchor="middle" fill="#91a2bf" font-size="18">文档 · 状态 · Observation</text>
+
+      <rect x="420" y="220" width="300" height="230" rx="32" fill="#102b32" stroke="#35c4b8" stroke-width="3"/>
+      <text x="570" y="281" text-anchor="middle" fill="#78eadc" font-size="18" font-weight="700">CLAIM-BOUND FACT</text>
+      <text x="570" y="340" text-anchor="middle" fill="#f3fffd" font-size="38" font-weight="850">Evidence</text>
+      <text x="570" y="382" text-anchor="middle" fill="#b6e3df" font-size="18">来源 · 定位 · 范围 · 时间 · 完整性</text>
+
+      <rect x="820" y="240" width="260" height="190" rx="28" fill="#1b2139" stroke="#7585ec" stroke-width="2"/>
+      <text x="950" y="294" text-anchor="middle" fill="#b1baff" font-size="17" font-weight="700">PROPOSITION</text>
+      <text x="950" y="345" text-anchor="middle" fill="#f6f7ff" font-size="34" font-weight="850">Claim</text>
+      <text x="950" y="382" text-anchor="middle" fill="#adb6d4" font-size="18">系统正在声称什么</text>
+
+      <rect x="1180" y="240" width="310" height="190" rx="28" fill="#201b35" stroke="#ae7cef" stroke-width="2"/>
+      <text x="1335" y="294" text-anchor="middle" fill="#d5b6ff" font-size="17" font-weight="700">POLICY-BASED JUDGMENT</text>
+      <text x="1335" y="345" text-anchor="middle" fill="#fbf7ff" font-size="32" font-weight="850">Evaluation</text>
+      <text x="1335" y="382" text-anchor="middle" fill="#c3b5d3" font-size="18">标准 · Verifier · Threshold</text>
+    </g>
+
+    <g fill="none" stroke="#7c91b8" stroke-width="4" marker-end="url(#arrow)"><path d="M320 335h88"/><path d="M720 335h88"/><path d="M1080 335h88"/></g>
+    <text x="364" y="318" text-anchor="middle" fill="#7f92ad" font-size="15">capture</text>
+    <text x="765" y="300" text-anchor="middle" fill="#67d8cf" font-size="15">supports / refutes</text>
+    <text x="1124" y="318" text-anchor="middle" fill="#a79cc2" font-size="15">judges</text>
+
+    <rect x="420" y="540" width="1070" height="160" rx="30" fill="#0d1728" stroke="#425777" stroke-width="2"/>
+    <text x="462" y="592" fill="#8194b3" font-size="16" font-weight="700">VERIFICATION RESULT</text>
+    <g font-size="28" font-weight="800" text-anchor="middle">
+      <rect x="470" y="618" width="250" height="56" rx="18" fill="#103528" stroke="#39c889"/><text x="595" y="655" fill="#75e5ac">VERIFIED</text>
+      <rect x="830" y="618" width="250" height="56" rx="18" fill="#3a1d25" stroke="#e06f81"/><text x="955" y="655" fill="#ff9bac">REFUTED</text>
+      <rect x="1190" y="618" width="250" height="56" rx="18" fill="#30291b" stroke="#e5b85e"/><text x="1315" y="655" fill="#f5d07d">INSUFFICIENT</text>
+    </g>
+    <path d="M1335 430v95H955v4" fill="none" stroke="#7c91b8" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="70" y="540" width="250" height="160" rx="28" fill="#101827" stroke="#314765"/>
+    <text x="195" y="586" text-anchor="middle" fill="#8295b2" font-size="16" font-weight="700">NOT THE SAME THING</text>
+    <text x="195" y="628" text-anchor="middle" fill="#d7e1ef" font-size="21">Trace · Citation · Artifact</text>
+    <text x="195" y="663" text-anchor="middle" fill="#8295b2" font-size="17">它们只是候选来源或相邻对象</text>
+
+    <text x="800" y="825" text-anchor="middle" fill="#91a2bf" font-size="22">Agent 可以提出 Claim，但不能只靠自己的话完成验收</text>
+  </g>
+</svg>
