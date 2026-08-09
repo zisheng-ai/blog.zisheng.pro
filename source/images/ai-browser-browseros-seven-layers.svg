@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI 浏览器七层架构</title>
+  <desc id="desc">从 Interaction Surface 到 Chromium Kernel 的六层运行时，以及贯穿所有产物的 Engineering Delivery Control Plane。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#0d1830"/>
+      <stop offset="1" stop-color="#17102d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35d7ff"/>
+      <stop offset="1" stop-color="#9a70ff"/>
+    </linearGradient>
+    <linearGradient id="delivery" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15334e"/>
+      <stop offset="1" stop-color="#2a1c52"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .sans{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Inter,Arial,sans-serif}
+      .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+      .layer{stroke-width:2}
+      .muted{fill:#8fa5c0}
+      .arrow{stroke:#7289a7;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L10,4 z" fill="#7289a7"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1450" cy="100" r="280" fill="#8b5cff" opacity="0.08"/>
+  <circle cx="120" cy="830" r="320" fill="#25d5ff" opacity="0.06"/>
+  <g opacity="0.12" stroke="#6e83a0" stroke-width="1">
+    <path d="M0 180H1600M0 360H1600M0 540H1600M0 720H1600"/>
+    <path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900"/>
+  </g>
+
+  <g class="sans">
+    <text x="100" y="94" fill="#eef8ff" font-size="52" font-weight="760">AI 浏览器不是一个聊天框</text>
+    <text x="100" y="145" fill="#a8b9d0" font-size="25">从 BrowserOS 拆解六层运行时与一条工程交付控制面</text>
+    <rect x="100" y="173" width="650" height="5" rx="2.5" fill="url(#accent)"/>
+  </g>
+
+  <g class="sans">
+    <rect x="100" y="225" width="1090" height="78" rx="18" fill="#10253a" stroke="#39d8ff" class="layer"/>
+    <text x="132" y="258" fill="#79e9ff" font-size="17" font-weight="700">L1 · INTERACTION SURFACE</text>
+    <text x="132" y="286" fill="#e4f5ff" font-size="23" font-weight="650">New Tab · Side Panel · Settings · MCP Client</text>
+
+    <rect x="100" y="321" width="1090" height="78" rx="18" fill="#11233b" stroke="#50bfff" class="layer"/>
+    <text x="132" y="354" fill="#8ed8ff" font-size="17" font-weight="700">L2 · LOCAL AGENT RUNTIME</text>
+    <text x="132" y="382" fill="#e6f1ff" font-size="23" font-weight="650">Session · Context · Agent Loop · Streaming · Policy</text>
+
+    <rect x="100" y="417" width="1090" height="78" rx="18" fill="#13213d" stroke="#6d9fff" class="layer"/>
+    <text x="132" y="450" fill="#a9c7ff" font-size="17" font-weight="700">L3 · MODEL &amp; EXTERNAL CAPABILITIES</text>
+    <text x="132" y="478" fill="#e8edff" font-size="23" font-weight="650">LLM Provider · External MCP · Connect Apps · OAuth</text>
+
+    <rect x="100" y="513" width="1090" height="78" rx="18" fill="#17203e" stroke="#887dff" class="layer"/>
+    <text x="132" y="546" fill="#c3b5ff" font-size="17" font-weight="700">L4 · BROWSER CAPABILITY</text>
+    <text x="132" y="574" fill="#f0ecff" font-size="23" font-weight="650">Semantic Tools · Browser Core · CDP</text>
+
+    <rect x="100" y="609" width="1090" height="78" rx="18" fill="#1d203f" stroke="#9b6fff" class="layer"/>
+    <text x="132" y="642" fill="#d1b4ff" font-size="17" font-weight="700">L5 · PRODUCT &amp; NATIVE INTEGRATION</text>
+    <text x="132" y="670" fill="#f3eaff" font-size="23" font-weight="650">Chromium Patches · chrome.browserOS · Sidecar Lifecycle</text>
+
+    <rect x="100" y="705" width="1090" height="78" rx="18" fill="#251f40" stroke="#b465ff" class="layer"/>
+    <text x="132" y="738" fill="#deaaff" font-size="17" font-weight="700">L6 · CHROMIUM KERNEL</text>
+    <text x="132" y="766" fill="#f6e9ff" font-size="23" font-weight="650">Blink · V8 · Network · Profile · Process · Extension</text>
+  </g>
+
+  <g>
+    <path d="M1215 264H1252" class="arrow"/>
+    <path d="M1215 360H1252" class="arrow"/>
+    <path d="M1215 456H1252" class="arrow"/>
+    <path d="M1215 552H1252" class="arrow"/>
+    <path d="M1215 648H1252" class="arrow"/>
+    <path d="M1215 744H1252" class="arrow"/>
+  </g>
+
+  <g class="sans">
+    <rect x="1270" y="225" width="230" height="558" rx="26" fill="url(#delivery)" stroke="url(#accent)" stroke-width="2.5"/>
+    <circle cx="1385" cy="290" r="18" fill="#49dcff" filter="url(#glow)"/>
+    <text x="1385" y="340" fill="#eaf7ff" font-size="19" font-weight="750" text-anchor="middle">L7</text>
+    <text x="1385" y="372" fill="#eaf7ff" font-size="22" font-weight="750" text-anchor="middle">ENGINEERING</text>
+    <text x="1385" y="402" fill="#eaf7ff" font-size="22" font-weight="750" text-anchor="middle">DELIVERY</text>
+    <text x="1385" y="432" fill="#eaf7ff" font-size="22" font-weight="750" text-anchor="middle">CONTROL PLANE</text>
+    <path d="M1320 469H1450" stroke="#6f83a4"/>
+    <text x="1385" y="511" class="muted" font-size="18" text-anchor="middle">Source Pin</text>
+    <text x="1385" y="551" class="muted" font-size="18" text-anchor="middle">Patch Stack</text>
+    <text x="1385" y="591" class="muted" font-size="18" text-anchor="middle">Compile</text>
+    <text x="1385" y="631" class="muted" font-size="18" text-anchor="middle">Sign &amp; Package</text>
+    <text x="1385" y="671" class="muted" font-size="18" text-anchor="middle">Release Gate</text>
+    <text x="1385" y="711" class="muted" font-size="18" text-anchor="middle">Feed &amp; OTA</text>
+  </g>
+
+  <g class="sans">
+    <rect x="100" y="821" width="1400" height="46" rx="14" fill="#0d1929" stroke="#29435f"/>
+    <text x="128" y="851" fill="#68e5ff" font-size="17" font-weight="700">Runtime:</text>
+    <text x="210" y="851" fill="#bdcce0" font-size="17">人和 Agent 如何使用浏览器</text>
+    <text x="580" y="851" fill="#be9aff" font-size="17" font-weight="700">Delivery:</text>
+    <text x="674" y="851" fill="#bdcce0" font-size="17">源码如何变成可安装、可发布、可更新的产品</text>
+  </g>
+</svg>
