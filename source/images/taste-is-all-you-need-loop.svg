@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">Taste 的可复用循环</title>
+  <desc id="desc">从 Reference、Diverge、Select、Constrain、Verify 到 Remember，再回到下一轮 Reference。</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f8f4"/>
+      <stop offset="1" stop-color="#e8efec"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#153b38" flood-opacity=".10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#7c9994"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="620" rx="34" fill="url(#canvas)"/>
+  <path d="M132 450C310 330 420 510 594 388S920 270 1105 392s260 82 366 2" fill="none" stroke="#d2dfda" stroke-width="38" stroke-linecap="round" opacity=".62"/>
+  <path d="M153 474C330 354 439 530 612 409s323-110 508 10 245 65 342 7" fill="none" stroke="#edf3f0" stroke-width="15" stroke-linecap="round"/>
+  <g fill="none" stroke="#7c9994" stroke-width="3" marker-end="url(#arrow)" opacity=".82">
+    <path d="M310 210H398"/><path d="M560 210H648"/><path d="M810 210H898"/><path d="M1060 210H1148"/><path d="M1310 210c105 0 125 145 40 205-154 109-1047 113-1178 9-63-50-44-145 38-145"/>
+  </g>
+  <g font-family="Inter, PingFang SC, sans-serif" text-anchor="middle">
+    <g filter="url(#shadow)">
+      <rect x="70" y="137" width="240" height="146" rx="24" fill="#fbfcf9" stroke="#cbdad5"/>
+      <rect x="320" y="137" width="240" height="146" rx="24" fill="#fbfcf9" stroke="#cbdad5"/>
+      <rect x="570" y="137" width="240" height="146" rx="24" fill="#e8f2ef" stroke="#7aa49d" stroke-width="2"/>
+      <rect x="820" y="137" width="240" height="146" rx="24" fill="#fbfcf9" stroke="#cbdad5"/>
+      <rect x="1070" y="137" width="240" height="146" rx="24" fill="#fbfcf9" stroke="#cbdad5"/>
+      <rect x="1320" y="137" width="210" height="146" rx="24" fill="#1b4945" stroke="#1b4945"/>
+    </g>
+    <g font-size="25" font-weight="700" fill="#234b47">
+      <text x="190" y="194">Reference</text><text x="440" y="194">Diverge</text><text x="690" y="194">Select</text><text x="940" y="194">Constrain</text><text x="1190" y="194">Verify</text>
+    </g>
+    <text x="1425" y="194" font-size="25" font-weight="700" fill="#f5f8f6">Remember</text>
+    <g font-size="17" fill="#718985">
+      <text x="190" y="239">扩大参考系</text><text x="440" y="239">生成有意义的候选</text><text x="690" y="239">说清哪里不对</text><text x="940" y="239">把偏好写成规则</text><text x="1190" y="239">回到真实产品</text>
+    </g>
+    <text x="1425" y="239" font-size="17" fill="#cbdad5">记住拒绝过什么</text>
+    <text x="800" y="518" font-size="20" font-weight="600" fill="#456b66" letter-spacing="2">TASTE 不是一次灵感，而是一条可以继续积累的反馈回路</text>
+  </g>
+  <circle cx="690" cy="117" r="7" fill="#b79243"/>
+</svg>

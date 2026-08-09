@@ -1,0 +1,13 @@
+{
+  "file": "/images/taste-is-all-you-need-options.webp",
+  "model": "built-in imagegen",
+  "requested_size": "auto landscape",
+  "actual_resolution": "1600x900",
+  "response_format": "generated_image",
+  "output_format": "webp",
+  "file_size_bytes": 46352,
+  "file_size_kb": 45.3,
+  "postprocess": "center crop 16:9, resize 1600x900, WebP q72",
+  "prompt": "Editorial illustration about judgment under abundance: many translucent generic interface candidates recede into a misty Jiangnan lake while one coherent lake-teal interface is selected by a human hand. Qingshan Lake palette, no text, no logos, no watermark, no neon or cyberpunk clutter.",
+  "created_at": "2026-08-10T00:20:40+0800"
+}

@@ -1,0 +1,15 @@
+{
+  "file": "/images/taste-is-all-you-need.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1600x900",
+  "generation_time_ms": 52749,
+  "generation_time_seconds": 52.75,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 48926,
+  "file_size_kb": 47.8,
+  "postprocess": "HTML/CSS text layer over apiyi backdrop, Chrome 2x screenshot, resize 1600x900, WebP q82",
+  "prompt": "Wide 16:9 atmospheric editorial backdrop for a technology essay about human taste in the AI era. A calm misty lake at dawn inspired by Jiangnan water forests: layered pale-gray mountains, deep lake-ink water, restrained lake-teal reflections, dark cypress silhouettes, a tiny trace of warm dawn gold. On the right half, many translucent generic interface fragments dissolve into mist while one coherent glass surface remains clear, suggesting selection among abundant AI outputs. The left and center-left stay quiet, bright, and low-detail for accurate title overlay. Refined editorial illustration, subtle paper grain, natural glass, calm and intelligent, high-end magazine cover. no text, no letters, no watermark, no brand marks, no platform logos, no neon, no blue-purple tech gradient, no robot, no humanoid figure.",
+  "created_at": "2026-08-10T00:20:40+0800"
+}

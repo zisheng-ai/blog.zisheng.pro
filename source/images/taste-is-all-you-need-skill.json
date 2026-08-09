@@ -1,0 +1,13 @@
+{
+  "file": "/images/taste-is-all-you-need-skill.webp",
+  "model": "built-in imagegen",
+  "requested_size": "auto landscape",
+  "actual_resolution": "1600x900",
+  "response_format": "generated_image",
+  "output_format": "webp",
+  "file_size_bytes": 55172,
+  "file_size_kb": 53.9,
+  "postprocess": "center crop 16:9, resize 1600x900, WebP q72",
+  "prompt": "Diagrammatic editorial illustration showing mist, lake, cypress, gray-blue hills and dawn gold distilled into semantic tokens and then applied across six generic device and web layouts. Qingshan Lake palette, no text, no logos, no watermark, no neon or glossy 3D.",
+  "created_at": "2026-08-10T00:20:40+0800"
+}
