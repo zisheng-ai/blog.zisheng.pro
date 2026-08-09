@@ -181,7 +181,23 @@ Taste 走到最后一层，才不再依赖某一次聊天的运气，而成为�
 | Web dashboard | 中高信息密度、键盘 focus、响应式与可读 surface |
 | Landing Page | 叙事层级、LCP、响应式媒体和渐进式氛围 |
 
-Skill 里除了 token，还有布局顺序、材质策略、状态合同、Reduced Motion、对比度检查和禁区。它不证明 Taste 可以被 AI 自动拥有；它证明的是另一件更务实的事：**人的判断可以被外化成 Agent 能读取、实现和验收的约束。**
+Qingshan Lake Design Skill 里除了 token，还有布局顺序、材质策略、状态合同、Reduced Motion、对比度检查和禁区。它不证明 Taste 可以被 AI 自动拥有；它证明的是另一件更务实的事：**人的判断可以被外化成 Agent 能读取、实现和验收的约束。**
+
+### 这不是三个项目，而是一条设计生产链
+
+如果只讲 Qingshan Lake Design Skill，这套方法仍然少了两端：判断从哪里来，以及视觉资产怎样稳定生产出来。
+
+| 环节 | 项目 | 解决的问题 |
+| --- | --- | --- |
+| Reference | [Design Language Atlas](https://design.zisheng.pro/) | 建立可搜索、可比较的设计语言与真实界面参考，回答“有哪些可能，为什么这个方向适合当前产品” |
+| Constraint | [Qingshan Lake Design Skill](https://github.com/zisheng-ai/qingshan-lake-design) | 把景观母题蒸馏成 semantic tokens、组件规则、跨端适配和 anti-pattern，回答“怎样持续做对” |
+| Production | [better-imagegen](https://github.com/zisheng-ai/better-imagegen) | 按资产类型选择模型与工作流，完成 prompt 约束、模型级联、后处理、metadata 和 QA，回答“怎样稳定交付可用资产” |
+
+Design Language Atlas 不是换皮网站。除了设计语言索引和可运行 Demo，它还在继续补 UI Reference、Design Systems、组件、模板和社区 UI Skills。它的价值不是替我选风格，而是把零散收藏变成可以搜索、对照和拆解的 Reference 系统。
+
+better-imagegen 也不只是给图片 API 包一层调用。封面、插图、Logo、壁纸、sprite loop 和 Codex pet 对尺寸、透明度、文字准确性、压缩与验收的要求完全不同，因此需要不同的生产路径。比如本文封面先由图片模型生成无文字的青山湖氛围底图，再用 HTML/CSS 确定性排版标题，最后转成 WebP 并记录生成 metadata。模型负责打开视觉可能性，工程流程负责保证文字、尺寸和交付结果没有靠运气。
+
+这三层刚好对应 Taste 的三个动作：**先扩大看过的世界，再把选择写成约束，最后把约束变成稳定产物。** 对我来说，这同样是设计，而不是设计完成之后的辅助工作。
 
 这也是整篇文章最关键的闭环。Taste 如果只能由作者本人“看一眼就知道”，它仍然难以规模化；当它能解释为什么、约束在哪里、怎样验证，才会从个人直觉变成团队和 Agent 可以复用的生产资料。
 
@@ -268,6 +284,7 @@ AI 会让更多人拥有更强的执行力，却不会自动替任何人承担�
 ## 延伸阅读与项目
 
 - [Qingshan Lake Design Skill](https://github.com/zisheng-ai/qingshan-lake-design)
+- [better-imagegen：通用多模型 AI 生图 Skill](https://github.com/zisheng-ai/better-imagegen)
 - [我用 Claude Code + Codex vibe 了一个 macOS App：Owlet](https://blog.zisheng.pro/posts/8a33f17a26ad/)
 - [青山湖设计风格的诞生记](https://blog.zisheng.pro/posts/8b52f4a0fd65/)
 - [让云雾动起来：聊天界面的分层氛围动画](https://blog.zisheng.pro/posts/5633e84c7f72/)
