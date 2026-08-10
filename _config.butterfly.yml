@@ -597,12 +597,9 @@ google_adsense:
 
 # Insert ads manually (手動插入廣告)
 ad:
-  index_top: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5641491107630454" data-ad-slot="1645676004" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  # index: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7962287588031867" data-ad-slot="3262295413" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  # aside: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7962287588031867" data-ad-slot="1257383027" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  post_top: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5641491107630454" data-ad-slot="5702084207" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  # post_bottom: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7962287588031867" data-ad-slot="5282734348" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
+  index: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5641491107630454" data-ad-slot="3604934553" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  aside: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5641491107630454" data-ad-slot="5955765729" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  post: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5641491107630454" data-ad-slot="4838125178" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 # Verification (站長驗證)
 # --------------------------------------
 
