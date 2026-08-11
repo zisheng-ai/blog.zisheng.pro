@@ -929,7 +929,6 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/custom.css" />
-    - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3994572229661703" crossorigin="anonymous"></script>
   bottom:
 
 # CDN
