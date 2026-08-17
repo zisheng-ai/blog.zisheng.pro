@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Distribution Profile is not user settings</title>
+  <desc id="desc">A two-column diagram contrasts a distribution profile owned by the product team with user preferences owned by an individual user.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#172a46"/>
+    </linearGradient>
+    <linearGradient id="profile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="settings" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1420" cy="70" r="300" fill="#2563eb" opacity="0.14"/>
+  <circle cx="160" cy="860" r="340" fill="#8b5cf6" opacity="0.12"/>
+  <text x="100" y="120" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="62" font-weight="700">Profile 到底是什么？</text>
+  <text x="104" y="180" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="31">不是用户设置，而是产品交付策略</text>
+  <g filter="url(#shadow)">
+    <rect x="100" y="255" width="650" height="480" rx="30" fill="#101b31" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="2"/>
+    <rect x="850" y="255" width="650" height="480" rx="30" fill="#1c1535" stroke="#e879f9" stroke-opacity="0.55" stroke-width="2"/>
+  </g>
+  <rect x="145" y="300" width="225" height="66" rx="33" fill="url(#profile)"/>
+  <text x="182" y="344" fill="white" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28" font-weight="700">Distribution</text>
+  <text x="145" y="420" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="43" font-weight="700">Profile</text>
+  <text x="145" y="474" fill="#bae6fd" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="27">产品团队拥有</text>
+  <line x1="145" y1="512" x2="700" y2="512" stroke="#334155"/>
+  <text x="145" y="564" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28">• 选择 Runtime 与平台策略</text>
+  <text x="145" y="617" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28">• 决定构建、打包和更新通道</text>
+  <text x="145" y="670" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28">• 随产品版本交付</text>
+  <rect x="895" y="300" width="170" height="66" rx="33" fill="url(#settings)"/>
+  <text x="932" y="344" fill="white" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28" font-weight="700">User</text>
+  <text x="895" y="420" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="43" font-weight="700">Settings</text>
+  <text x="895" y="474" fill="#f5d0fe" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="27">每位用户拥有</text>
+  <line x1="895" y1="512" x2="1450" y2="512" stroke="#4c1d95"/>
+  <text x="895" y="564" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28">• 主题、首页、语言和隐私选项</text>
+  <text x="895" y="617" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28">• 在已安装应用中随时修改</text>
+  <text x="895" y="670" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="28">• 随用户数据保存或同步</text>
+  <path d="M752 495H840" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
+  <path d="M810 475L840 495 810 515" fill="none" stroke="#f8fafc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="100" y="826" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="25">产品策略决定交付边界；用户设置决定个人使用体验。</text>
+</svg>
