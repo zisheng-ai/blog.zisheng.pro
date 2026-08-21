@@ -1,0 +1,16 @@
+{
+  "file": "/images/agent-skill-llm-wiki-knowledge-loop.webp",
+  "model": "gpt-image-2-all",
+  "requested_size": "1280x720",
+  "actual_resolution": "1600x900",
+  "generation_time_ms": 84093,
+  "generation_time_seconds": 84.09,
+  "response_format": "b64_json",
+  "output_format": "webp",
+  "file_size_bytes": 57468,
+  "file_size_kb": 56.1,
+  "postprocess": "Qingshan Lake light backdrop with deterministic HTML text layer, Chrome 2x screenshot, resized to 1600x900, WebP q78",
+  "sha256": "f355303ac994a88b043b5845e9152ba8fabdb28ae2efaffed003f35745fad538",
+  "prompt": "Wide 16:9 abstract technical poster backdrop in Qingshan Lake light visual language. Warm mist-white canvas, translucent pale lake haze, restrained lake-teal and cypress-green traces, distant gray-blue hill layering only around the outer edges, rare soft dawn-gold accent. Visual metaphor of accumulated knowledge: subtle branching lines and layered paper-like contours flowing from left to right, but no readable diagram, no UI cards, no focal icon. Keep the center and upper middle clean, quiet and low-detail for deterministic text overlay. Premium editorial engineering aesthetic, precise, low noise, generous breathing room, soft paper and water depth. no text, no letters, no watermark, no brand marks, no platform logos, no robot, no human, no literal landscape poster, no blue-purple gradient, no neon.",
+  "created_at": "2026-08-21T11:23:39+0800"
+}
